@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\pdfuni]
+@="Juntar PDFS Aqui"
+"Icon"="C:\\Program Files\\\pdfuni\\\pdfuni.ico"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\pdfuni\command]
+@="\"C:\\Program Files\\pdfuni\\pdfuni.exe\" \"%v.\""
