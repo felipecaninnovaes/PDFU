@@ -1,5 +1,5 @@
-md "C:\Program Files\pdfuni"
-cd "C:\Program Files\pdfuni"
+md "C:\Program Files\PDFU"
+cd "C:\Program Files\PDFU"
 
 curl -L https://github.com/felipecaninnovaes/pdfuni/blob/main/pdfuni.exe?raw=true -o pdfuni.exe
 curl -L https://raw.githubusercontent.com/felipecaninnovaes/pdfuni/main/pdfuni.reg -o pdfuni.reg
