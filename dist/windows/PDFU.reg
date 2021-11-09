@@ -1,8 +1,0 @@
-Windows Registry Editor Version 5.00
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\PDFU]
-@="Abrir PDFU"
-"Icon"="C:\\Program Files\\\PDFU\\\PDFU.ico"
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\PDFU\command]
-@="\"C:\\Program Files\\PDFU\\PDFU.exe\" \"%v.\""
