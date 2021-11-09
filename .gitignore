@@ -8,6 +8,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+.qt_for_python/
 build/
 develop-eggs/
 downloads/
