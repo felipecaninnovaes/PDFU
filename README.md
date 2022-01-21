@@ -1,1 +1,3 @@
-# PDFUni (Beta)
+## PDFU Functionality:
+
+  - Merges all PDF in folder 
