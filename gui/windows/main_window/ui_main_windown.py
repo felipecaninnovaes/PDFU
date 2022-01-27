@@ -118,7 +118,7 @@ class UI_MainWindow(QWidget):
         self.botton_spacer = QSpacerItem(20,20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         
         # BOTTON RIGHT LABEL
-        self.botton_label_right = QLabel("© 2021")
+        self.botton_label_right = QLabel("© 2022")
         self.botton_label_right.setStyleSheet("font: 700 9pt")
         
         # ADD TO LAYOUT
