@@ -1,8 +1,8 @@
 #///////////////////////////////////////////////////////////////
 #
 # BY: FELIPE CANIN NOVAES
-# PROJECT MADE WITH: Project
-# V: 1.0.0
+# PROJECT MADE WITH: PDFU
+# V: 1.0.1
 #
 # This project can be used freely for all uses, as long as they maintain the
 # respective credits only in the Python scripts, any information in the visual
