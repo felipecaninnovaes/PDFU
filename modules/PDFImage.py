@@ -1,4 +1,4 @@
-#///////////////////////////////////////////////////////////////
+# ///////////////////////////////////////////////////////////////
 #
 # BY: FELIPE CANIN NOVAES
 # PROJECT MADE WITH: PDFU
@@ -18,26 +18,19 @@
 
 import img2pdf
 from PIL import Image
-import os
 from qt_core import *
 
 
 class PDFImage(object):
     def pdf_image(self, file_name, folder):
-    
-		# # storing image path
-		# file_name = "C:/Users/Admin/Desktop/GfG_images/do_nawab.png"
-		
-		# # storing pdf path
-		# folder = "C:/Users/Admin/Desktop/GfG_images/file.pdf"
-  
-  
-		image_file = Image.open(file_name)
-		pdf_bytes = img2pdf.convert(image_file.filename)
-		file = open(folder, "wb")
-		file.write(pdf_bytes)
-		image_file.close()
-		file.close()
-		
-		# output
-		print("Successfully made pdf file")
+
+        image_file = Image.open(folder)
+        pdf_bytes = img2pdf.convert(image_file.filename)
+        file_name = file_name + ".pdf"
+        file = open(file_name, "wb")
+        file.write(pdf_bytes)
+        image_file.close()
+        file.close()
+        # output
+        print("Successfully made pdf file")
+        print(file_name)

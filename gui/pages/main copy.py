@@ -1,31 +1,16 @@
-#///////////////////////////////////////////////////////////////
-#
-# BY: FELIPE CANIN NOVAES
-# PROJECT MADE WITH: PDFU
-# V: 1.0.1
-#
-# This project can be used freely for all uses, as long as they maintain the
-# respective credits only in the Python scripts, any information in the visual
-# interface (GUI) can be modified without any implication.
-#
-# There are limitations on Qt licenses if you want to use your products
-# commercially, I recommend reading them on the official website:
-# https://doc.qt.io/qtforpython/licenses.html
-#
-# ///////////////////////////////////////////////////////////////
-# 
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'pagesmJtZrK.ui'
+## Form generated from reading UI file 'pages.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.2.0
+## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from qt_core import *
-
+from PySide2.QtCore import *
+from PySide2.QtGui import *
+from PySide2.QtWidgets import *
 
 
 class Ui_application_pages(object):
@@ -65,16 +50,7 @@ class Ui_application_pages(object):
         self.lineEdit_2 = QLineEdit(self.frame)
         self.lineEdit_2.setObjectName(u"lineEdit_2")
         self.lineEdit_2.setMaximumSize(QSize(960, 24))
-        self.lineEdit_2.setStyleSheet(u"    padding-top: 16px;\n"
-"    width: 100%;\n"
-"    height: 30px;\n"
-"    color: #333;\n"
-"    font-family: nunito,proxima-nova,sans-serif;\n"
-"    font-style: normal;\n"
-"    font-size: 14px;\n"
-"    border: 2px solid #dcdce6;\n"
-"    border-radius: 3px;\n"
-"    padding: 0 24px;")
+        self.lineEdit_2.setStyleSheet(u"color: black")
         self.lineEdit_2.setReadOnly(True)
 
         self.horizontalLayout_2.addWidget(self.lineEdit_2)
@@ -89,26 +65,7 @@ class Ui_application_pages(object):
         self.pushButton_2.setMaximumSize(QSize(80, 24))
         self.pushButton_2.setBaseSize(QSize(0, 0))
         self.pushButton_2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton_2.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
-"    color: #FFFFFF;\n"
-"    font-family: nunito, proxima-nova, sans-serif;\n"
-"    font-size: 16px;\n"
-"    font-weight: 800;\n"
-"    outline: 0;\n"
-"    text-align: center;\n"
-"    text-transform: none;\n"
-"    vertical-align: middle;\n"
-"    padding-right: 15px;\n"
-"    padding-left: 15px;\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: #DE403A;\n"
-"}")
+        self.pushButton_2.setStyleSheet(u"color: black")
 
         self.horizontalLayout_2.addWidget(self.pushButton_2)
 
@@ -131,16 +88,7 @@ class Ui_application_pages(object):
         self.lineEdit = QLineEdit(self.frame_2)
         self.lineEdit.setObjectName(u"lineEdit")
         self.lineEdit.setMaximumSize(QSize(960, 24))
-        self.lineEdit.setStyleSheet(u"    padding-top: 16px;\n"
-"    width: 100%;\n"
-"    height: 30px;\n"
-"    color: #333;\n"
-"    font-family: nunito,proxima-nova,sans-serif;\n"
-"    font-style: normal;\n"
-"    font-size: 14px;\n"
-"    border: 2px solid #dcdce6;\n"
-"    border-radius: 3px;\n"
-"    padding: 0 24px;")
+        self.lineEdit.setStyleSheet(u"color: black")
         self.lineEdit.setReadOnly(True)
 
         self.horizontalLayout.addWidget(self.lineEdit)
@@ -152,26 +100,7 @@ class Ui_application_pages(object):
         self.pushButton.setMaximumSize(QSize(80, 24))
         self.pushButton.setBaseSize(QSize(0, 0))
         self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
-"    color: #FFFFFF;\n"
-"    font-family: nunito, proxima-nova, sans-serif;\n"
-"    font-size: 16px;\n"
-"    font-weight: 800;\n"
-"    outline: 0;\n"
-"    text-align: center;\n"
-"    text-transform: none;\n"
-"    vertical-align: middle;\n"
-"    padding-right: 15px;\n"
-"    padding-left: 15px;\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: #DE403A;\n"
-"}")
+        self.pushButton.setStyleSheet(u"color: black")
 
         self.horizontalLayout.addWidget(self.pushButton)
 
@@ -186,30 +115,11 @@ class Ui_application_pages(object):
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.pushButton_3 = QPushButton(self.frame_3)
         self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setMinimumSize(QSize(60, 0))
+        self.pushButton_3.setMinimumSize(QSize(60, 25))
         self.pushButton_3.setMaximumSize(QSize(100, 25))
         self.pushButton_3.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_3.setLayoutDirection(Qt.LeftToRight)
-        self.pushButton_3.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
-"    color: #FFFFFF;\n"
-"    font-family: nunito, proxima-nova, sans-serif;\n"
-"    font-size: 16px;\n"
-"    font-weight: 800;\n"
-"    outline: 0;\n"
-"    text-align: center;\n"
-"    text-transform: none;\n"
-"    vertical-align: middle;\n"
-"    padding-right: 15px;\n"
-"    padding-left: 15px;\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: #DE403A;\n"
-"}")
+        self.pushButton_3.setStyleSheet(u"color: black")
 
         self.horizontalLayout_3.addWidget(self.pushButton_3)
 
@@ -246,16 +156,7 @@ class Ui_application_pages(object):
         self.lineEdit_3 = QLineEdit(self.frame_6)
         self.lineEdit_3.setObjectName(u"lineEdit_3")
         self.lineEdit_3.setMaximumSize(QSize(960, 24))
-        self.lineEdit_3.setStyleSheet(u"    padding-top: 16px;\n"
-"    width: 100%;\n"
-"    height: 30px;\n"
-"    color: #333;\n"
-"    font-family: nunito,proxima-nova,sans-serif;\n"
-"    font-style: normal;\n"
-"    font-size: 14px;\n"
-"    border: 2px solid #dcdce6;\n"
-"    border-radius: 3px;\n"
-"    padding: 0 24px;")
+        self.lineEdit_3.setStyleSheet(u"color: black")
         self.lineEdit_3.setReadOnly(True)
 
         self.horizontalLayout_4.addWidget(self.lineEdit_3)
@@ -267,26 +168,7 @@ class Ui_application_pages(object):
         self.pushButton_4.setMaximumSize(QSize(80, 24))
         self.pushButton_4.setBaseSize(QSize(0, 0))
         self.pushButton_4.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton_4.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
-"    color: #FFFFFF;\n"
-"    font-family: nunito, proxima-nova, sans-serif;\n"
-"    font-size: 16px;\n"
-"    font-weight: 800;\n"
-"    outline: 0;\n"
-"    text-align: center;\n"
-"    text-transform: none;\n"
-"    vertical-align: middle;\n"
-"    padding-right: 15px;\n"
-"    padding-left: 15px;\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: #DE403A;\n"
-"}")
+        self.pushButton_4.setStyleSheet(u"color: black")
 
         self.horizontalLayout_4.addWidget(self.pushButton_4)
 
@@ -309,16 +191,7 @@ class Ui_application_pages(object):
         self.lineEdit_4 = QLineEdit(self.frame_8)
         self.lineEdit_4.setObjectName(u"lineEdit_4")
         self.lineEdit_4.setMaximumSize(QSize(960, 24))
-        self.lineEdit_4.setStyleSheet(u"    padding-top: 16px;\n"
-"    width: 100%;\n"
-"    height: 30px;\n"
-"    color: #333;\n"
-"    font-family: nunito,proxima-nova,sans-serif;\n"
-"    font-style: normal;\n"
-"    font-size: 14px;\n"
-"    border: 2px solid #dcdce6;\n"
-"    border-radius: 3px;\n"
-"    padding: 0 24px;")
+        self.lineEdit_4.setStyleSheet(u"color: black")
         self.lineEdit_4.setReadOnly(True)
 
         self.horizontalLayout_6.addWidget(self.lineEdit_4)
@@ -330,26 +203,7 @@ class Ui_application_pages(object):
         self.pushButton_5.setMaximumSize(QSize(80, 24))
         self.pushButton_5.setBaseSize(QSize(0, 0))
         self.pushButton_5.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton_5.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
-"    color: #FFFFFF;\n"
-"    font-family: nunito, proxima-nova, sans-serif;\n"
-"    font-size: 16px;\n"
-"    font-weight: 800;\n"
-"    outline: 0;\n"
-"    text-align: center;\n"
-"    text-transform: none;\n"
-"    vertical-align: middle;\n"
-"    padding-right: 15px;\n"
-"    padding-left: 15px;\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: #DE403A;\n"
-"}")
+        self.pushButton_5.setStyleSheet(u"color: black")
 
         self.horizontalLayout_6.addWidget(self.pushButton_5)
 
@@ -368,26 +222,7 @@ class Ui_application_pages(object):
         self.pushButton_6.setMaximumSize(QSize(100, 25))
         self.pushButton_6.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_6.setLayoutDirection(Qt.LeftToRight)
-        self.pushButton_6.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
-"    color: #FFFFFF;\n"
-"    font-family: nunito, proxima-nova, sans-serif;\n"
-"    font-size: 16px;\n"
-"    font-weight: 800;\n"
-"    outline: 0;\n"
-"    text-align: center;\n"
-"    text-transform: none;\n"
-"    vertical-align: middle;\n"
-"    padding-right: 15px;\n"
-"    padding-left: 15px;\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: #DE403A;\n"
-"}")
+        self.pushButton_6.setStyleSheet(u"color: black")
 
         self.horizontalLayout_5.addWidget(self.pushButton_6)
 
