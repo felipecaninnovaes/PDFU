@@ -78,16 +78,18 @@ margin-left: 300px;
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">    padding-top: 16px;
+          <string notr="true">QLineEdit {
+    padding-top: 16px;
     width: 100%;
     height: 30px;
     color: #333;
-    font-family: nunito,proxima-nova,sans-serif;
     font-style: normal;
     font-size: 14px;
     border: 2px solid #dcdce6;
     border-radius: 3px;
-    padding: 0 24px;</string>
+    padding: 0 24px;
+}
+</string>
          </property>
          <property name="text">
           <string/>
@@ -126,7 +128,6 @@ margin-left: 300px;
     border: 1px solid #FF4742;
     border-radius: 6px;
     color: #FFFFFF;
-    font-family: nunito, proxima-nova, sans-serif;
     font-size: 16px;
     font-weight: 800;
     outline: 0;
@@ -184,16 +185,18 @@ QPushButton:hover {
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">    padding-top: 16px;
+          <string notr="true">QLineEdit {
+    padding-top: 16px;
     width: 100%;
     height: 30px;
     color: #333;
-    font-family: nunito,proxima-nova,sans-serif;
     font-style: normal;
     font-size: 14px;
     border: 2px solid #dcdce6;
     border-radius: 3px;
-    padding: 0 24px;</string>
+    padding: 0 24px;
+}
+</string>
          </property>
          <property name="readOnly">
           <bool>true</bool>
@@ -229,7 +232,6 @@ QPushButton:hover {
     border: 1px solid #FF4742;
     border-radius: 6px;
     color: #FFFFFF;
-    font-family: nunito, proxima-nova, sans-serif;
     font-size: 16px;
     font-weight: 800;
     outline: 0;
@@ -288,7 +290,6 @@ QPushButton:hover {
     border: 1px solid #FF4742;
     border-radius: 6px;
     color: #FFFFFF;
-    font-family: nunito, proxima-nova, sans-serif;
     font-size: 16px;
     font-weight: 800;
     outline: 0;
@@ -322,6 +323,9 @@ QPushButton:hover {
        <string notr="true">color: black;
 font-size: 60px;
 margin-left: 200px;
+font-family: sans-serif;
+
+
 </string>
       </property>
       <property name="text">
@@ -363,16 +367,18 @@ margin-left: 200px;
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">    padding-top: 16px;
+          <string notr="true">QLineEdit {
+    padding-top: 16px;
     width: 100%;
     height: 30px;
     color: #333;
-    font-family: nunito,proxima-nova,sans-serif;
     font-style: normal;
     font-size: 14px;
     border: 2px solid #dcdce6;
     border-radius: 3px;
-    padding: 0 24px;</string>
+    padding: 0 24px;
+}
+</string>
          </property>
          <property name="text">
           <string/>
@@ -411,7 +417,6 @@ margin-left: 200px;
     border: 1px solid #FF4742;
     border-radius: 6px;
     color: #FFFFFF;
-    font-family: nunito, proxima-nova, sans-serif;
     font-size: 16px;
     font-weight: 800;
     outline: 0;
@@ -469,16 +474,18 @@ QPushButton:hover {
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">    padding-top: 16px;
+          <string notr="true">QLineEdit {
+    padding-top: 16px;
     width: 100%;
     height: 30px;
     color: #333;
-    font-family: nunito,proxima-nova,sans-serif;
     font-style: normal;
     font-size: 14px;
     border: 2px solid #dcdce6;
     border-radius: 3px;
-    padding: 0 24px;</string>
+    padding: 0 24px;
+}
+</string>
          </property>
          <property name="readOnly">
           <bool>true</bool>
@@ -514,7 +521,6 @@ QPushButton:hover {
     border: 1px solid #FF4742;
     border-radius: 6px;
     color: #FFFFFF;
-    font-family: nunito, proxima-nova, sans-serif;
     font-size: 16px;
     font-weight: 800;
     outline: 0;
@@ -573,7 +579,6 @@ QPushButton:hover {
     border: 1px solid #FF4742;
     border-radius: 6px;
     color: #FFFFFF;
-    font-family: nunito, proxima-nova, sans-serif;
     font-size: 16px;
     font-weight: 800;
     outline: 0;

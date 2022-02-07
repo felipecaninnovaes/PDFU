@@ -17,12 +17,15 @@
 import platform, os
 from glob import glob
 from PyPDF2 import PdfFileMerger
-from qt_core import *
 
-class PDFUni(object):
-    def pdf_merge(self, file_name, folder):
-        if os.path.exists(file_name + ".pdf"):
-            os.remove(file_name + ".pdf")
+from PySide6.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
+
+class PDFMarge(object):
+    def pdf_merge(self, file_save_name, folder):
+        if os.path.exists(file_save_name + ".pdf"):
+            os.remove(file_save_name + ".pdf")
         else:
             print("Gen New File")
         if platform.system() == "Windows":
@@ -33,6 +36,6 @@ class PDFUni(object):
         merger = PdfFileMerger()
         allpdfs = [a for a in glob(folder_location)]
         [merger.append(pdf) for pdf in allpdfs]
-        with open(file_name + ".pdf", "wb") as new_file:
+        with open(file_save_name + ".pdf", "wb") as new_file:
             
             merger.write(new_file)

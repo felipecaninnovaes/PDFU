@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   sodipodi:docname="icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     width="512px"
+     inkscape:zoom="0.7071068"
+     inkscape:cx="153.44217"
+     inkscape:cy="-216.37467"
+     inkscape:window-width="2560"
+     inkscape:window-height="966"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="134.1315"
+       y="182.53023"
+       width="129.6185"
+       height="54.719771"
+       id="rect9936" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3264">
+      <stop
+         style="stop-color:#ff4742;stop-opacity:1;"
+         offset="0"
+         id="stop3260" />
+      <stop
+         style="stop-color:#ff4742;stop-opacity:0;"
+         offset="1"
+         id="stop3262" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect3060"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,3.175,0,1 @ F,0,0,1,0,3.175,0,1 @ F,0,0,1,0,3.175,0,1 @ F,0,0,1,0,3.175,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="12"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1726"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,0,1,0,3.175,0,1 @ F,0,0,1,0,3.175,0,1 @ F,0,0,1,0,3.175,0,1 @ F,0,0,1,0,3.175,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="12"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3264"
+       id="linearGradient3266"
+       x1="134.17351"
+       y1="158.21513"
+       x2="34.125"
+       y2="488.875"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.88049465,0,0,0.88154159,-117.10595,-131.27236)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#808080;stroke:#000000;stroke-width:0.311999;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"
+       id="rect1680"
+       width="135.09746"
+       height="135.09538"
+       x="0.15917309"
+       y="0.19333249"
+       inkscape:path-effect="#path-effect1726"
+       d="M 3.3341731,0.19333249 H 132.08163 a 3.175,3.175 45 0 1 3.175,3.17500001 V 132.11372 a 3.175,3.175 135 0 1 -3.175,3.175 H 3.3341731 a 3.175,3.175 45 0 1 -3.17500001,-3.175 V 3.3683325 A 3.175,3.175 135 0 1 3.3341731,0.19333249 Z"
+       sodipodi:type="rect"
+       inkscape:export-filename="/Users/felipecn/Documents/PROJECTS_DEV/PYTHON/PDFU_PROJECT/PDFU/icon.png"
+       inkscape:export-xdpi="318.11359"
+       inkscape:export-ydpi="318.11359" />
+    <path
+       style="fill:url(#linearGradient3266);fill-opacity:1;stroke:#000000;stroke-width:0.36731;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="M 7.5404278,134.01447 C 4.430538,132.93816 1.8495265,130.08698 1.1871214,126.9961 0.94055652,125.84558 0.86983507,108.75684 0.93796789,66.795211 L 1.0331054,8.2008674 1.7950501,6.6506413 C 2.7668875,4.6733612 4.6697332,2.7682526 6.6446564,1.7952601 L 8.1930503,1.0324093 H 67.65171 127.11037 l 1.45554,0.673489 c 2.17216,1.0050718 4.08929,2.9423124 5.11747,5.1711492 l 0.89824,1.9471669 V 67.730226 126.63624 l -0.89639,1.94305 c -1.13556,2.46143 -3.21446,4.44551 -5.59054,5.33559 l -1.78593,0.66899 -58.590905,-0.0102 c -55.12582,-0.01 -58.6847246,-0.0427 -60.1774272,-0.55925 z"
+       id="path2006"
+       inkscape:export-filename="/Users/felipecn/Documents/PROJECTS_DEV/PYTHON/PDFU_PROJECT/PDFU/icon.png"
+       inkscape:export-xdpi="318.11359"
+       inkscape:export-ydpi="318.11359" />
+    <path
+       style="fill:#ff0000;stroke:#000000;stroke-width:0.00573921;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="m 0.99612103,29.635633 c 8.8e-6,-0.03746 7.6617e-4,-0.05218 0.001761,-0.03263 8.8051e-4,0.01957 8.8051e-4,0.05025 -8.8e-6,0.06813 -8.8041e-4,0.01797 -0.001761,0.0017 -0.001761,-0.03553 z"
+       id="path2156"
+       inkscape:export-filename="/Users/felipecn/Documents/PROJECTS_DEV/PYTHON/PDFU_PROJECT/PDFU/icon.png"
+       inkscape:export-xdpi="318.11359"
+       inkscape:export-ydpi="318.11359" />
+    <rect
+       style="fill:#ff4742;fill-opacity:1;stroke:#000000;stroke-width:1.0389;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"
+       id="rect3357"
+       width="133.54852"
+       height="0.62334687"
+       x="1.0331053"
+       y="8.2008667"
+       inkscape:export-filename="/Users/felipecn/Documents/PROJECTS_DEV/PYTHON/PDFU_PROJECT/PDFU/icon.png"
+       inkscape:export-xdpi="318.11359"
+       inkscape:export-ydpi="318.11359" />
+    <path
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.259726;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="m 1.5407072,7.4339824 c 0,-0.075018 0.3492481,-0.7120563 0.7760944,-1.4155707 C 3.2788036,4.4329152 5.0085091,2.8268344 6.7615123,1.891378 L 8.0959811,1.1792685 H 67.669926 127.24388 l 1.3423,0.6783992 c 2.08043,1.0514498 4.43279,3.5112066 5.0945,5.3271028 0.13364,0.3667655 -3.10221,0.3856746 -65.999721,0.3856746 -36.377136,0 -66.1402518,-0.061445 -66.1402518,-0.1364627 z"
+       id="path3857"
+       inkscape:export-filename="/Users/felipecn/Documents/PROJECTS_DEV/PYTHON/PDFU_PROJECT/PDFU/icon.png"
+       inkscape:export-xdpi="318.11359"
+       inkscape:export-ydpi="318.11359" />
+    <path
+       style="fill:#cccccc;fill-opacity:1;stroke:#000000;stroke-width:0.259726;stroke-miterlimit:4;stroke-dasharray:none;paint-order:stroke fill markers"
+       d="m 1.1004598,8.4519867 c 0,-0.146442 22.3792402,-0.2203856 66.6974712,-0.2203856 44.318229,0 66.697479,0.07396 66.697479,0.2203856 0,0.1464419 -22.37925,0.2203853 -66.697479,0.2203853 -44.318231,0 -66.6974712,-0.07396 -66.6974712,-0.2203853 z"
+       id="path3933"
+       inkscape:export-filename="/Users/felipecn/Documents/PROJECTS_DEV/PYTHON/PDFU_PROJECT/PDFU/icon.png"
+       inkscape:export-xdpi="318.11359"
+       inkscape:export-ydpi="318.11359" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.88049467,0,0,0.88154157,-104.81679,-111.83414)"
+       id="text9934"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect9936);fill:#000000;fill-opacity:1;stroke:none"
+       inkscape:export-filename="/Users/felipecn/Documents/PROJECTS_DEV/PYTHON/PDFU_PROJECT/PDFU/icon.png"
+       inkscape:export-xdpi="318.11359"
+       inkscape:export-ydpi="318.11359"><tspan
+         x="134.13086"
+         y="226.32115"
+         id="tspan946"><tspan
+           style="font-size:48px;font-family:'Noto Sans Adlam';-inkscape-font-specification:'Noto Sans Adlam, Normal';fill:#ded5de"
+           id="tspan944">PDFU</tspan></tspan></text>
+  </g>
+</svg>

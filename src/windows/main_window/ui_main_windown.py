@@ -16,19 +16,18 @@
 
 
 # IMPORT QT CORE
-from shiboken6.Shiboken import Object
-from qt_core import *
-
-import os
+from PySide6.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
 
 # IMPORT PAGES
-from gui.pages.ui_pages import Ui_application_pages
-from modules.pdfunify import PDFUni
+from pages.ui_pages import Ui_application_pages
+from modules.PDFMager import PDFMarge
 from modules.PDFImage import PDFImage
 
 
 # IMPORT CUSTOM WIDGETS
-from gui.widgets.py_push_button import PyPushButton
+from widgets.py_push_button import PyPushButton
 
 # MAIN WINDOW
 
@@ -78,7 +77,7 @@ class UI_MainWindow(QWidget):
             text="Ocultar menu",
             icon_path="toggle.svg"
         )
-
+    
         self.home_button = PyPushButton(
             text="Juntar PDF",
             is_active=True,
@@ -164,16 +163,6 @@ class UI_MainWindow(QWidget):
 
         self.pages = QStackedWidget()
         self.pages.setStyleSheet("font-size: 12pt; color:#f8f8f2")
-        self.ui_pages = Ui_application_pages()
-        self.ui_pages.setupUi(self.pages)
-        global ui_pages
-        self.ui_pages.pushButton.clicked.connect(file_save)
-        self.ui_pages.pushButton_2.clicked.connect(folder_location)
-        self.ui_pages.pushButton_3.clicked.connect(clicked)
-        
-        self.ui_pages.pushButton_4.clicked.connect(file_location_img)
-        self.ui_pages.pushButton_5.clicked.connect(file_save_img)
-        self.ui_pages.pushButton_6.clicked.connect(clicked_img)
 
 
         # BOTTOm BAR
@@ -213,7 +202,20 @@ class UI_MainWindow(QWidget):
         # SET CENTRAL WIDGET
         parent.setCentralWidget(self.central_frame)
 
-        #EXPORT VARIABLES
+#==============================================VARIABLES AND FUNCTIONS==============================================================#
+        
+        
+        self.ui_pages = Ui_application_pages()
+        self.ui_pages.setupUi(self.pages)
+        global ui_pages
+        
+        self.ui_pages.pushButton.clicked.connect(file_save)
+        self.ui_pages.pushButton_2.clicked.connect(folder_location)
+        self.ui_pages.pushButton_3.clicked.connect(clicked)
+        
+        self.ui_pages.pushButton_4.clicked.connect(file_location_img)
+        self.ui_pages.pushButton_5.clicked.connect(file_save_img)
+        self.ui_pages.pushButton_6.clicked.connect(clicked_img)
 
         global line_edit, line_edit_2, line_edit_3, line_edit_4
         line_edit = self.ui_pages.lineEdit
@@ -223,28 +225,28 @@ class UI_MainWindow(QWidget):
         global msg
         msg = QMessageBox()
 
-#==============================================MODULES==============================================================#
+#==============================================FUNCTIONS PDFMerger==============================================================#
 
 def clicked(self):
-    global file_name, folder, msg
-    PDFUni.pdf_merge(self, file_name, folder)
+    global file_save_name, folder, msg
+    PDFMarge.pdf_merge(self, file_save_name, folder)
     msg.setWindowTitle("Secesso")
-    msg.setText("Arquivo Gerado com sucesso em: " + file_name)
+    msg.setText("Arquivo Gerado com sucesso em: " + file_save_name)
     msg.show()
     line_edit.setText(QApplication.translate("Ui_application_pages", ""))
     line_edit_2.setText(QApplication.translate("Ui_application_pages", ""))
-    file_name = ""
+    file_save_name = ""
     folder = ""
 
 
 def file_save(self):
-    global file_name
-    file_name = ""
-    file_name = QFileDialog.getSaveFileName()[0]
-    file_name = file_name.replace(".pdf", "")
-    file_name = file_name.replace(".PDF", "")
+    global file_save_name
+    file_save_name = ""
+    file_save_name = QFileDialog.getSaveFileName()[0]
+    file_save_name = file_save_name.replace(".pdf", "")
+    file_save_name = file_save_name.replace(".PDF", "")
     line_edit.setText(QApplication.translate(
-        "Ui_application_pages", file_name + ".pdf"))
+        "Ui_application_pages", file_save_name + ".pdf"))
 
 
 def folder_location(self):
@@ -253,31 +255,32 @@ def folder_location(self):
     folder = QFileDialog.getExistingDirectory()
     line_edit_2.setText(QApplication.translate("Ui_application_pages", folder))
     
+#==============================================FUNCTIONS PDFMerger==============================================================#
     
 def clicked_img(self):
-    global file_name, folder, msg
-    PDFImage.pdf_image(self, file_name, folder)
+    global file_save_name, file_name, msg
+    PDFImage.pdf_image(self, file_save_name, file_name)
     msg.setWindowTitle("Secesso")
-    msg.setText("Arquivo Gerado com sucesso em: " + file_name + ".pdf")
+    msg.setText("Arquivo Gerado com sucesso em: " + file_save_name + ".pdf")
     msg.show()
     line_edit_3.setText(QApplication.translate("Ui_application_pages", ""))
     line_edit_4.setText(QApplication.translate("Ui_application_pages", ""))
+    file_save_name = ""
     file_name = ""
-    folder = ""
 
 
 def file_save_img(self):
-    global file_name
-    file_name = ""
-    file_name = QFileDialog.getSaveFileName()[0]
-    file_name = file_name.replace(".pdf", "")
-    file_name = file_name.replace(".PDF", "")
+    global file_save_name
+    file_save_name = ""
+    file_save_name = QFileDialog.getSaveFileName()[0]
+    file_save_name = file_save_name.replace(".pdf", "")
+    file_save_name = file_save_name.replace(".PDF", "")
     line_edit_4.setText(QApplication.translate(
-        "Ui_application_pages", file_name + ".pdf"))
+        "Ui_application_pages", file_save_name + ".pdf"))
 
 
 def file_location_img(self):
-    global folder
-    folder = ""
-    folder = QFileDialog.getOpenFileName()[0]
-    line_edit_3.setText(QApplication.translate("Ui_application_pages", folder))
+    global file_name
+    file_name = ""
+    file_name = QFileDialog.getOpenFileName()[0]
+    line_edit_3.setText(QApplication.translate("Ui_application_pages", file_name))

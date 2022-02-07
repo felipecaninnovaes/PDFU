@@ -1,0 +1,2 @@
+MacOS: pyinstaller --windowed --onedir --name="PDFu" --clean --add-data="gui:gui" --icon=icon.ico --noconfirm main.py 
+Windows: pyinstaller --windowed --onefile --name="PDFu" --clean --add-data="gui;gui" --icon=icon.ico --noconfirm main.py 

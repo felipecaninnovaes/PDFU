@@ -18,7 +18,9 @@
 import os
 
 # IMPORT QT CORE
-from qt_core import *
+from PySide6.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
 
 class PyPushButton(QPushButton):
     def __init__(
@@ -128,10 +130,12 @@ class PyPushButton(QPushButton):
 
     def draw_icon(self, qp, image, rect, color):
         # Format Path
-        app_path = os.path.abspath(os.getcwd())
-        folder = "gui/images/icons"
-        path = os.path.join(app_path, folder)
+        folder = "images/icons"
+        basedir = os.path.dirname(__file__)
+        path = os.path.join(basedir, folder)
         icon_path = os.path.normpath(os.path.join(path, image))
+        # print("Basedir ", basedir)
+        # print("Path ",path)
 
         # Draw icon
         icon = QPixmap(icon_path)

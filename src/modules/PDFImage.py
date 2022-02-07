@@ -18,19 +18,22 @@
 
 import img2pdf
 from PIL import Image
-from qt_core import *
+
+from PySide6.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
 
 
 class PDFImage(object):
-    def pdf_image(self, file_name, folder):
+    def pdf_image(self, file_save_name, file_name):
 
-        image_file = Image.open(folder)
+        image_file = Image.open(file_name)
         pdf_bytes = img2pdf.convert(image_file.filename)
-        file_name = file_name + ".pdf"
-        file = open(file_name, "wb")
+        file_save_name = file_save_name + ".pdf"
+        file = open(file_save_name, "wb")
         file.write(pdf_bytes)
         image_file.close()
         file.close()
         # output
         print("Successfully made pdf file")
-        print(file_name)
+        print(file_save_name)

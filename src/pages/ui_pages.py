@@ -1,32 +1,23 @@
-#///////////////////////////////////////////////////////////////
-#
-# BY: FELIPE CANIN NOVAES
-# PROJECT MADE WITH: PDFU
-# V: 1.0.1
-#
-# This project can be used freely for all uses, as long as they maintain the
-# respective credits only in the Python scripts, any information in the visual
-# interface (GUI) can be modified without any implication.
-#
-# There are limitations on Qt licenses if you want to use your products
-# commercially, I recommend reading them on the official website:
-# https://doc.qt.io/qtforpython/licenses.html
-#
-# ///////////////////////////////////////////////////////////////
-# 
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'pagesmJtZrK.ui'
+## Form generated from reading UI file 'pages.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.2.0
+## Created by: Qt User Interface Compiler version 6.2.3
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from qt_core import *
-
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
+    QLineEdit, QPushButton, QSizePolicy, QStackedWidget,
+    QVBoxLayout, QWidget)
 
 class Ui_application_pages(object):
     def setupUi(self, application_pages):
@@ -65,16 +56,18 @@ class Ui_application_pages(object):
         self.lineEdit_2 = QLineEdit(self.frame)
         self.lineEdit_2.setObjectName(u"lineEdit_2")
         self.lineEdit_2.setMaximumSize(QSize(960, 24))
-        self.lineEdit_2.setStyleSheet(u"    padding-top: 16px;\n"
+        self.lineEdit_2.setStyleSheet(u"QLineEdit {\n"
+"    padding-top: 16px;\n"
 "    width: 100%;\n"
 "    height: 30px;\n"
 "    color: #333;\n"
-"    font-family: nunito,proxima-nova,sans-serif;\n"
 "    font-style: normal;\n"
 "    font-size: 14px;\n"
 "    border: 2px solid #dcdce6;\n"
 "    border-radius: 3px;\n"
-"    padding: 0 24px;")
+"    padding: 0 24px;\n"
+"}\n"
+"")
         self.lineEdit_2.setReadOnly(True)
 
         self.horizontalLayout_2.addWidget(self.lineEdit_2)
@@ -94,7 +87,6 @@ class Ui_application_pages(object):
 "    border: 1px solid #FF4742;\n"
 "    border-radius: 6px;\n"
 "    color: #FFFFFF;\n"
-"    font-family: nunito, proxima-nova, sans-serif;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
 "    outline: 0;\n"
@@ -131,16 +123,18 @@ class Ui_application_pages(object):
         self.lineEdit = QLineEdit(self.frame_2)
         self.lineEdit.setObjectName(u"lineEdit")
         self.lineEdit.setMaximumSize(QSize(960, 24))
-        self.lineEdit.setStyleSheet(u"    padding-top: 16px;\n"
+        self.lineEdit.setStyleSheet(u"QLineEdit {\n"
+"    padding-top: 16px;\n"
 "    width: 100%;\n"
 "    height: 30px;\n"
 "    color: #333;\n"
-"    font-family: nunito,proxima-nova,sans-serif;\n"
 "    font-style: normal;\n"
 "    font-size: 14px;\n"
 "    border: 2px solid #dcdce6;\n"
 "    border-radius: 3px;\n"
-"    padding: 0 24px;")
+"    padding: 0 24px;\n"
+"}\n"
+"")
         self.lineEdit.setReadOnly(True)
 
         self.horizontalLayout.addWidget(self.lineEdit)
@@ -157,7 +151,6 @@ class Ui_application_pages(object):
 "    border: 1px solid #FF4742;\n"
 "    border-radius: 6px;\n"
 "    color: #FFFFFF;\n"
-"    font-family: nunito, proxima-nova, sans-serif;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
 "    outline: 0;\n"
@@ -195,7 +188,6 @@ class Ui_application_pages(object):
 "    border: 1px solid #FF4742;\n"
 "    border-radius: 6px;\n"
 "    color: #FFFFFF;\n"
-"    font-family: nunito, proxima-nova, sans-serif;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
 "    outline: 0;\n"
@@ -226,6 +218,9 @@ class Ui_application_pages(object):
         self.label_5.setStyleSheet(u"color: black;\n"
 "font-size: 60px;\n"
 "margin-left: 200px;\n"
+"font-family: sans-serif;\n"
+"\n"
+"\n"
 "")
 
         self.verticalLayout_2.addWidget(self.label_5)
@@ -246,16 +241,18 @@ class Ui_application_pages(object):
         self.lineEdit_3 = QLineEdit(self.frame_6)
         self.lineEdit_3.setObjectName(u"lineEdit_3")
         self.lineEdit_3.setMaximumSize(QSize(960, 24))
-        self.lineEdit_3.setStyleSheet(u"    padding-top: 16px;\n"
+        self.lineEdit_3.setStyleSheet(u"QLineEdit {\n"
+"    padding-top: 16px;\n"
 "    width: 100%;\n"
 "    height: 30px;\n"
 "    color: #333;\n"
-"    font-family: nunito,proxima-nova,sans-serif;\n"
 "    font-style: normal;\n"
 "    font-size: 14px;\n"
 "    border: 2px solid #dcdce6;\n"
 "    border-radius: 3px;\n"
-"    padding: 0 24px;")
+"    padding: 0 24px;\n"
+"}\n"
+"")
         self.lineEdit_3.setReadOnly(True)
 
         self.horizontalLayout_4.addWidget(self.lineEdit_3)
@@ -272,7 +269,6 @@ class Ui_application_pages(object):
 "    border: 1px solid #FF4742;\n"
 "    border-radius: 6px;\n"
 "    color: #FFFFFF;\n"
-"    font-family: nunito, proxima-nova, sans-serif;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
 "    outline: 0;\n"
@@ -309,16 +305,18 @@ class Ui_application_pages(object):
         self.lineEdit_4 = QLineEdit(self.frame_8)
         self.lineEdit_4.setObjectName(u"lineEdit_4")
         self.lineEdit_4.setMaximumSize(QSize(960, 24))
-        self.lineEdit_4.setStyleSheet(u"    padding-top: 16px;\n"
+        self.lineEdit_4.setStyleSheet(u"QLineEdit {\n"
+"    padding-top: 16px;\n"
 "    width: 100%;\n"
 "    height: 30px;\n"
 "    color: #333;\n"
-"    font-family: nunito,proxima-nova,sans-serif;\n"
 "    font-style: normal;\n"
 "    font-size: 14px;\n"
 "    border: 2px solid #dcdce6;\n"
 "    border-radius: 3px;\n"
-"    padding: 0 24px;")
+"    padding: 0 24px;\n"
+"}\n"
+"")
         self.lineEdit_4.setReadOnly(True)
 
         self.horizontalLayout_6.addWidget(self.lineEdit_4)
@@ -335,7 +333,6 @@ class Ui_application_pages(object):
 "    border: 1px solid #FF4742;\n"
 "    border-radius: 6px;\n"
 "    color: #FFFFFF;\n"
-"    font-family: nunito, proxima-nova, sans-serif;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
 "    outline: 0;\n"
@@ -373,7 +370,6 @@ class Ui_application_pages(object):
 "    border: 1px solid #FF4742;\n"
 "    border-radius: 6px;\n"
 "    color: #FFFFFF;\n"
-"    font-family: nunito, proxima-nova, sans-serif;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
 "    outline: 0;\n"
