@@ -49,7 +49,8 @@ class Ui_application_pages(object):
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.label_2 = QLabel(self.frame)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setStyleSheet(u"color: black")
+        self.label_2.setStyleSheet(u"color: black;\n"
+"font-size: 14px;")
 
         self.horizontalLayout_2.addWidget(self.label_2)
 
@@ -116,7 +117,8 @@ class Ui_application_pages(object):
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.label = QLabel(self.frame_2)
         self.label.setObjectName(u"label")
-        self.label.setStyleSheet(u"color: black")
+        self.label.setStyleSheet(u"color: black;\n"
+"font-size: 14px;")
 
         self.horizontalLayout.addWidget(self.label)
 
@@ -234,7 +236,8 @@ class Ui_application_pages(object):
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.label_3 = QLabel(self.frame_6)
         self.label_3.setObjectName(u"label_3")
-        self.label_3.setStyleSheet(u"color: black")
+        self.label_3.setStyleSheet(u"color: black;\n"
+"font-size: 14px;")
 
         self.horizontalLayout_4.addWidget(self.label_3)
 
@@ -298,7 +301,8 @@ class Ui_application_pages(object):
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.label_4 = QLabel(self.frame_8)
         self.label_4.setObjectName(u"label_4")
-        self.label_4.setStyleSheet(u"color: black")
+        self.label_4.setStyleSheet(u"color: black;\n"
+"font-size: 14px;")
 
         self.horizontalLayout_6.addWidget(self.label_4)
 

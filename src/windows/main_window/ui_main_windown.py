@@ -2,7 +2,7 @@
 #
 # BY: FELIPE CANIN NOVAES
 # PROJECT MADE WITH: PDFU
-# V: 1.0.1
+# V: 1.0.2
 #
 # This project can be used freely for all uses, as long as they maintain the
 # respective credits only in the Python scripts, any information in the visual
@@ -114,7 +114,7 @@ class UI_MainWindow(QWidget):
         # self.left_menu_bottom_layout.addWidget(self.setting_button)
 
         # LABEL VERSION
-        self.left_menu_label_version = QLabel("v1.0.1")
+        self.left_menu_label_version = QLabel("v1.0.2")
         self.left_menu_label_version.setAlignment(Qt.AlignCenter)
         self.left_menu_label_version.setMinimumHeight(30)
         self.left_menu_label_version.setMaximumHeight(30)

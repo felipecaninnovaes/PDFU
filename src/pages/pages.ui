@@ -62,7 +62,8 @@ margin-left: 300px;
        <item>
         <widget class="QLabel" name="label_2">
          <property name="styleSheet">
-          <string notr="true">color: black</string>
+          <string notr="true">color: black;
+font-size: 14px;</string>
          </property>
          <property name="text">
           <string>Abrir em:    </string>
@@ -169,7 +170,8 @@ QPushButton:hover {
        <item>
         <widget class="QLabel" name="label">
          <property name="styleSheet">
-          <string notr="true">color: black</string>
+          <string notr="true">color: black;
+font-size: 14px;</string>
          </property>
          <property name="text">
           <string>Salvar em: </string>
@@ -351,7 +353,8 @@ font-family: sans-serif;
        <item>
         <widget class="QLabel" name="label_3">
          <property name="styleSheet">
-          <string notr="true">color: black</string>
+          <string notr="true">color: black;
+font-size: 14px;</string>
          </property>
          <property name="text">
           <string>Abrir em:    </string>
@@ -458,7 +461,8 @@ QPushButton:hover {
        <item>
         <widget class="QLabel" name="label_4">
          <property name="styleSheet">
-          <string notr="true">color: black</string>
+          <string notr="true">color: black;
+font-size: 14px;</string>
          </property>
          <property name="text">
           <string>Salvar em: </string>
