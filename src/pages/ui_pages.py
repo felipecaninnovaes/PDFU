@@ -395,6 +395,190 @@ class Ui_application_pages(object):
         self.verticalLayout_2.addWidget(self.frame_7)
 
         application_pages.addWidget(self.page_2)
+        self.page_3 = QWidget()
+        self.page_3.setObjectName(u"page_3")
+        self.verticalLayout_3 = QVBoxLayout(self.page_3)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.label_9 = QLabel(self.page_3)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setStyleSheet(u"color: black;\n"
+"font-size: 60px;\n"
+"margin-left: 300px;\n"
+"font-family: sans-serif;\n"
+"\n"
+"\n"
+"")
+
+        self.verticalLayout_3.addWidget(self.label_9)
+
+        self.frame_10 = QFrame(self.page_3)
+        self.frame_10.setObjectName(u"frame_10")
+        self.frame_10.setMaximumSize(QSize(960, 60))
+        self.frame_10.setFrameShape(QFrame.NoFrame)
+        self.frame_10.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_8 = QHBoxLayout(self.frame_10)
+        self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
+        self.label_8 = QLabel(self.frame_10)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setStyleSheet(u"color: black;\n"
+"font-size: 14px;")
+
+        self.horizontalLayout_8.addWidget(self.label_8)
+
+        self.lineEdit_5 = QLineEdit(self.frame_10)
+        self.lineEdit_5.setObjectName(u"lineEdit_5")
+        self.lineEdit_5.setMaximumSize(QSize(960, 24))
+        self.lineEdit_5.setStyleSheet(u"QLineEdit {\n"
+"    padding-top: 16px;\n"
+"    width: 100%;\n"
+"    height: 30px;\n"
+"    color: #333;\n"
+"    font-style: normal;\n"
+"    font-size: 14px;\n"
+"    border: 2px solid #dcdce6;\n"
+"    border-radius: 3px;\n"
+"    padding: 0 24px;\n"
+"}\n"
+"")
+        self.lineEdit_5.setReadOnly(True)
+
+        self.horizontalLayout_8.addWidget(self.lineEdit_5)
+
+        self.pushButton_7 = QPushButton(self.frame_10)
+        self.pushButton_7.setObjectName(u"pushButton_7")
+        sizePolicy.setHeightForWidth(self.pushButton_7.sizePolicy().hasHeightForWidth())
+        self.pushButton_7.setSizePolicy(sizePolicy)
+        self.pushButton_7.setMaximumSize(QSize(80, 24))
+        self.pushButton_7.setBaseSize(QSize(0, 0))
+        self.pushButton_7.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_7.setStyleSheet(u"QPushButton {\n"
+"    background: #FF4742;\n"
+"    border: 1px solid #FF4742;\n"
+"    border-radius: 6px;\n"
+"    color: #FFFFFF;\n"
+"    font-size: 16px;\n"
+"    font-weight: 800;\n"
+"    outline: 0;\n"
+"    text-align: center;\n"
+"    text-transform: none;\n"
+"    vertical-align: middle;\n"
+"    padding-right: 15px;\n"
+"    padding-left: 15px;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: #DE403A;\n"
+"}")
+
+        self.horizontalLayout_8.addWidget(self.pushButton_7)
+
+
+        self.verticalLayout_3.addWidget(self.frame_10)
+
+        self.frame_9 = QFrame(self.page_3)
+        self.frame_9.setObjectName(u"frame_9")
+        self.frame_9.setMaximumSize(QSize(960, 60))
+        self.frame_9.setFrameShape(QFrame.NoFrame)
+        self.frame_9.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_7 = QHBoxLayout(self.frame_9)
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.label_7 = QLabel(self.frame_9)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setStyleSheet(u"color: black;\n"
+"font-size: 14px;")
+
+        self.horizontalLayout_7.addWidget(self.label_7)
+
+        self.lineEdit_6 = QLineEdit(self.frame_9)
+        self.lineEdit_6.setObjectName(u"lineEdit_6")
+        self.lineEdit_6.setMaximumSize(QSize(960, 24))
+        self.lineEdit_6.setStyleSheet(u"QLineEdit {\n"
+"    padding-top: 16px;\n"
+"    width: 100%;\n"
+"    height: 30px;\n"
+"    color: #333;\n"
+"    font-style: normal;\n"
+"    font-size: 14px;\n"
+"    border: 2px solid #dcdce6;\n"
+"    border-radius: 3px;\n"
+"    padding: 0 24px;\n"
+"}\n"
+"")
+        self.lineEdit_6.setReadOnly(True)
+
+        self.horizontalLayout_7.addWidget(self.lineEdit_6)
+
+        self.pushButton_8 = QPushButton(self.frame_9)
+        self.pushButton_8.setObjectName(u"pushButton_8")
+        sizePolicy.setHeightForWidth(self.pushButton_8.sizePolicy().hasHeightForWidth())
+        self.pushButton_8.setSizePolicy(sizePolicy)
+        self.pushButton_8.setMaximumSize(QSize(80, 24))
+        self.pushButton_8.setBaseSize(QSize(0, 0))
+        self.pushButton_8.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_8.setStyleSheet(u"QPushButton {\n"
+"    background: #FF4742;\n"
+"    border: 1px solid #FF4742;\n"
+"    border-radius: 6px;\n"
+"    color: #FFFFFF;\n"
+"    font-size: 16px;\n"
+"    font-weight: 800;\n"
+"    outline: 0;\n"
+"    text-align: center;\n"
+"    text-transform: none;\n"
+"    vertical-align: middle;\n"
+"    padding-right: 15px;\n"
+"    padding-left: 15px;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: #DE403A;\n"
+"}")
+
+        self.horizontalLayout_7.addWidget(self.pushButton_8)
+
+
+        self.verticalLayout_3.addWidget(self.frame_9)
+
+        self.frame_11 = QFrame(self.page_3)
+        self.frame_11.setObjectName(u"frame_11")
+        self.frame_11.setFrameShape(QFrame.NoFrame)
+        self.frame_11.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_9 = QHBoxLayout(self.frame_11)
+        self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
+        self.pushButton_9 = QPushButton(self.frame_11)
+        self.pushButton_9.setObjectName(u"pushButton_9")
+        self.pushButton_9.setMinimumSize(QSize(60, 25))
+        self.pushButton_9.setMaximumSize(QSize(100, 25))
+        self.pushButton_9.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton_9.setLayoutDirection(Qt.LeftToRight)
+        self.pushButton_9.setStyleSheet(u"QPushButton {\n"
+"    background: #FF4742;\n"
+"    border: 1px solid #FF4742;\n"
+"    border-radius: 6px;\n"
+"    color: #FFFFFF;\n"
+"    font-size: 16px;\n"
+"    font-weight: 800;\n"
+"    outline: 0;\n"
+"    text-align: center;\n"
+"    text-transform: none;\n"
+"    vertical-align: middle;\n"
+"    padding-right: 15px;\n"
+"    padding-left: 15px;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: #DE403A;\n"
+"}")
+
+        self.horizontalLayout_9.addWidget(self.pushButton_9)
+
+
+        self.verticalLayout_3.addWidget(self.frame_11)
+
+        application_pages.addWidget(self.page_3)
 
         self.retranslateUi(application_pages)
 
@@ -417,5 +601,12 @@ class Ui_application_pages(object):
         self.label_4.setText(QCoreApplication.translate("application_pages", u"Salvar em: ", None))
         self.pushButton_5.setText(QCoreApplication.translate("application_pages", u"...", None))
         self.pushButton_6.setText(QCoreApplication.translate("application_pages", u"SALVAR", None))
+        self.label_9.setText(QCoreApplication.translate("application_pages", u"Dividir PDFS", None))
+        self.label_8.setText(QCoreApplication.translate("application_pages", u"Abrir em:    ", None))
+        self.lineEdit_5.setText("")
+        self.pushButton_7.setText(QCoreApplication.translate("application_pages", u"...", None))
+        self.label_7.setText(QCoreApplication.translate("application_pages", u"Salvar em: ", None))
+        self.pushButton_8.setText(QCoreApplication.translate("application_pages", u"...", None))
+        self.pushButton_9.setText(QCoreApplication.translate("application_pages", u"SALVAR", None))
     # retranslateUi
 

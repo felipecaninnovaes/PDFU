@@ -22,26 +22,11 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
-class PDFMarge(object):
-    def pdf_merge(self, file_save_name, folder):
-        if os.path.exists(file_save_name + ".pdf"):
-            os.remove(file_save_name + ".pdf")
-        else:
-            print("Gen New File")
-        if platform.system() == "Windows":
-            folder_location = (folder + "\*.pdf")
-        else:
-            folder_location = (folder + "/*.pdf")
-        pdf = Pdf.new()
+class PDFSplit(object):
+    def pdf_split(self, file_save_name, file_name):
+        pdf = Pdf.open(file_name)
 
-        version = pdf.pdf_version
-
-        for file in glob(folder_location):
-            src = Pdf.open(file)
-            version = max(version, src.pdf_version)
-            pdf.pages.extend(src.pages)
-
-
-        pdf.remove_unreferenced_resources()
-
-        pdf.save(file_save_name + ".pdf", min_version=version)
+        for n, page in enumerate(pdf.pages):
+            dst = Pdf.new()
+            dst.pages.append(page)
+            dst.save(file_save_name +' '+ f'{n:02d}.pdf')

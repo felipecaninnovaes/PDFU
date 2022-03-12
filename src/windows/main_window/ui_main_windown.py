@@ -24,6 +24,7 @@ from PySide6.QtWidgets import *
 from pages.ui_pages import Ui_application_pages
 from modules.PDFMager import PDFMarge
 from modules.PDFImage import PDFImage
+from modules.PDFSplit import PDFSplit
 
 
 # IMPORT CUSTOM WIDGETS
@@ -89,11 +90,17 @@ class UI_MainWindow(QWidget):
             is_active=False,
             icon_path="icon_imageconv.svg"
         )
+        self.div_button = PyPushButton(
+            text="Split PDF",
+            is_active=False,
+            icon_path="icon_split.svg"
+        )
 
         # ADD BUTTONS TO LAYOUT
         self.left_menu_top_layout.addWidget(self.toggle_button)
         self.left_menu_top_layout.addWidget(self.home_button)
         self.left_menu_top_layout.addWidget(self.imageconv_button)
+        self.left_menu_top_layout.addWidget(self.div_button)
 
         # MENU SPACER
         self.left_menu_spacer = QSpacerItem(
@@ -216,12 +223,18 @@ class UI_MainWindow(QWidget):
         self.ui_pages.pushButton_4.clicked.connect(file_location_img)
         self.ui_pages.pushButton_5.clicked.connect(file_save_img)
         self.ui_pages.pushButton_6.clicked.connect(clicked_img)
+        
+        self.ui_pages.pushButton_7.clicked.connect(file_location_split)
+        self.ui_pages.pushButton_8.clicked.connect(file_save_split)
+        self.ui_pages.pushButton_9.clicked.connect(clicked_split)
 
-        global line_edit, line_edit_2, line_edit_3, line_edit_4
+        global line_edit, line_edit_2, line_edit_3, line_edit_4, line_edit_5, line_edit_6
         line_edit = self.ui_pages.lineEdit
         line_edit_2 = self.ui_pages.lineEdit_2
         line_edit_3 = self.ui_pages.lineEdit_3
         line_edit_4 = self.ui_pages.lineEdit_4
+        line_edit_5 = self.ui_pages.lineEdit_5
+        line_edit_6 = self.ui_pages.lineEdit_6
         global msg
         msg = QMessageBox()
 
@@ -255,7 +268,7 @@ def folder_location(self):
     folder = QFileDialog.getExistingDirectory()
     line_edit_2.setText(QApplication.translate("Ui_application_pages", folder))
     
-#==============================================FUNCTIONS PDFMerger==============================================================#
+#==============================================FUNCTIONS PDFImage==============================================================#
     
 def clicked_img(self):
     global file_save_name, file_name, msg
@@ -284,3 +297,33 @@ def file_location_img(self):
     file_name = ""
     file_name = QFileDialog.getOpenFileName()[0]
     line_edit_3.setText(QApplication.translate("Ui_application_pages", file_name))
+
+#==============================================FUNCTIONS PDFSplit==============================================================#
+    
+def clicked_split(self):
+    global file_save_name, file_name, msg
+    PDFSplit.pdf_split(self, file_save_name, file_name)
+    msg.setWindowTitle("Secesso")
+    msg.setText("Arquivo Gerado com sucesso em: " + file_save_name + ".pdf")
+    msg.show()
+    line_edit_5.setText(QApplication.translate("Ui_application_pages", ""))
+    line_edit_6.setText(QApplication.translate("Ui_application_pages", ""))
+    file_save_name = ""
+    file_name = ""
+
+
+def file_save_split(self):
+    global file_save_name
+    file_save_name = ""
+    file_save_name = QFileDialog.getSaveFileName()[0]
+    file_save_name = file_save_name.replace(".pdf", "")
+    file_save_name = file_save_name.replace(".PDF", "")
+    line_edit_6.setText(QApplication.translate(
+        "Ui_application_pages", file_save_name + ".pdf"))
+
+
+def file_location_split(self):
+    global file_name
+    file_name = ""
+    file_name = QFileDialog.getOpenFileName()[0]
+    line_edit_5.setText(QApplication.translate("Ui_application_pages", file_name))

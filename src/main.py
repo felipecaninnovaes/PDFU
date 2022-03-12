@@ -46,6 +46,7 @@ class MainWindow(QMainWindow):
         # Btn widgets
         self.ui.imageconv_button.clicked.connect(self.show_page_2)
         
+        self.ui.div_button.clicked.connect(self.show_page_3)
         # SHOW APPLICATION
         self.show()
       # Change text - Home Page
@@ -72,6 +73,11 @@ class MainWindow(QMainWindow):
         self.reset_selection()
         self.ui.pages.setCurrentWidget(self.ui.ui_pages.page_2)
         self.ui.imageconv_button.set_active(True)  
+
+    def show_page_3(self):
+        self.reset_selection()
+        self.ui.pages.setCurrentWidget(self.ui.ui_pages.page_3)
+        self.ui.div_button.set_active(True)  
         
     def toggle_button(self):
         menu_width = self.ui.left_menu.width()
