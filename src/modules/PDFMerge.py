@@ -22,7 +22,7 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
-class PDFMarge(object):
+class PDFMerge(object):
     def pdf_merge(self, file_save_name, folder):
         if os.path.exists(file_save_name + ".pdf"):
             os.remove(file_save_name + ".pdf")

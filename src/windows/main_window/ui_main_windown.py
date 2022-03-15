@@ -20,13 +20,16 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
+import time
 # IMPORT PAGES
 from pages.ui_pages import Ui_application_pages
-from modules.PDFMager import PDFMarge
+from modules.PDFMerge import PDFMerge
 from modules.PDFImage import PDFImage
 from modules.PDFSplit import PDFSplit
+from modules.PDFDocx import PDFDocx
 
-
+file_save_name = ""
+file_name = ""
 # IMPORT CUSTOM WIDGETS
 from widgets.py_push_button import PyPushButton
 
@@ -91,9 +94,14 @@ class UI_MainWindow(QWidget):
             icon_path="icon_imageconv.svg"
         )
         self.div_button = PyPushButton(
-            text="Split PDF",
+            text="Dividir PDF",
             is_active=False,
             icon_path="icon_split.svg"
+        )
+        self.docx_button = PyPushButton(
+            text="PDF to Word",
+            is_active=False,
+            icon_path="icon_docx.svg"
         )
 
         # ADD BUTTONS TO LAYOUT
@@ -101,6 +109,7 @@ class UI_MainWindow(QWidget):
         self.left_menu_top_layout.addWidget(self.home_button)
         self.left_menu_top_layout.addWidget(self.imageconv_button)
         self.left_menu_top_layout.addWidget(self.div_button)
+        self.left_menu_top_layout.addWidget(self.docx_button)
 
         # MENU SPACER
         self.left_menu_spacer = QSpacerItem(
@@ -227,30 +236,48 @@ class UI_MainWindow(QWidget):
         self.ui_pages.pushButton_7.clicked.connect(file_location_split)
         self.ui_pages.pushButton_8.clicked.connect(file_save_split)
         self.ui_pages.pushButton_9.clicked.connect(clicked_split)
+        
+        self.ui_pages.pushButton_10.clicked.connect(file_location_docx)
+        self.ui_pages.pushButton_11.clicked.connect(file_save_docx)
+        self.ui_pages.pushButton_12.clicked.connect(clicked_docx)
 
-        global line_edit, line_edit_2, line_edit_3, line_edit_4, line_edit_5, line_edit_6
+        global line_edit, line_edit_2, line_edit_3, line_edit_4, line_edit_5, line_edit_6, line_edit_7, line_edit_8
+        global push_button3, push_button6, push_button9, push_button12
+        
         line_edit = self.ui_pages.lineEdit
         line_edit_2 = self.ui_pages.lineEdit_2
         line_edit_3 = self.ui_pages.lineEdit_3
         line_edit_4 = self.ui_pages.lineEdit_4
         line_edit_5 = self.ui_pages.lineEdit_5
         line_edit_6 = self.ui_pages.lineEdit_6
+        line_edit_7 = self.ui_pages.lineEdit_7
+        line_edit_8 = self.ui_pages.lineEdit_8
+        
+        push_button3 = self.ui_pages.pushButton_3
+        push_button6 = self.ui_pages.pushButton_6
+        push_button9 = self.ui_pages.pushButton_9
+        push_button12 = self.ui_pages.pushButton_12
         global msg
         msg = QMessageBox()
+            
 
 #==============================================FUNCTIONS PDFMerger==============================================================#
 
 def clicked(self):
     global file_save_name, folder, msg
-    PDFMarge.pdf_merge(self, file_save_name, folder)
-    msg.setWindowTitle("Secesso")
-    msg.setText("Arquivo Gerado com sucesso em: " + file_save_name)
-    msg.show()
-    line_edit.setText(QApplication.translate("Ui_application_pages", ""))
-    line_edit_2.setText(QApplication.translate("Ui_application_pages", ""))
-    file_save_name = ""
-    folder = ""
-
+    if file_save_name == "" and file_name == "":
+        msg.setWindowTitle("ERRO")
+        msg.setText("Selecione os arquivos para continuar")
+        msg.show()
+    else:
+        PDFMerge.pdf_merge(self, file_save_name, folder)
+        msg.setWindowTitle("Secesso")
+        msg.setText("Arquivo Gerado com sucesso em: " + file_save_name + ".pdf")
+        msg.show()
+        line_edit.setText(QApplication.translate("Ui_application_pages", ""))
+        line_edit_2.setText(QApplication.translate("Ui_application_pages", ""))
+        file_save_name = ""
+        folder = ""
 
 def file_save(self):
     global file_save_name
@@ -272,14 +299,20 @@ def folder_location(self):
     
 def clicked_img(self):
     global file_save_name, file_name, msg
-    PDFImage.pdf_image(self, file_save_name, file_name)
-    msg.setWindowTitle("Secesso")
-    msg.setText("Arquivo Gerado com sucesso em: " + file_save_name + ".pdf")
-    msg.show()
-    line_edit_3.setText(QApplication.translate("Ui_application_pages", ""))
-    line_edit_4.setText(QApplication.translate("Ui_application_pages", ""))
-    file_save_name = ""
-    file_name = ""
+    if file_save_name == "" and file_name == "":
+        msg.setWindowTitle("ERRO")
+        msg.setText("Selecione os arquivos para continuar")
+        msg.show()
+    else:
+        PDFImage.pdf_image(self, file_save_name, file_name)
+        msg.setWindowTitle("Secesso")
+        msg.setText("Arquivo Gerado com sucesso em: " + file_save_name + ".pdf")
+        msg.show()
+        push_button6.setText("SALVAR")
+        line_edit_3.setText(QApplication.translate("Ui_application_pages", ""))
+        line_edit_4.setText(QApplication.translate("Ui_application_pages", ""))
+        file_save_name = ""
+        file_name = ""
 
 
 def file_save_img(self):
@@ -302,14 +335,18 @@ def file_location_img(self):
     
 def clicked_split(self):
     global file_save_name, file_name, msg
-    PDFSplit.pdf_split(self, file_save_name, file_name)
-    msg.setWindowTitle("Secesso")
-    msg.setText("Arquivo Gerado com sucesso em: " + file_save_name + ".pdf")
-    msg.show()
-    line_edit_5.setText(QApplication.translate("Ui_application_pages", ""))
-    line_edit_6.setText(QApplication.translate("Ui_application_pages", ""))
-    file_save_name = ""
-    file_name = ""
+    if file_save_name == "" and file_name == "":
+        msg.setWindowTitle("ERRO")
+        msg.setText("Selecione os arquivos para continuar")
+        msg.show()
+    else:
+        PDFSplit.pdf_split(self, file_save_name, file_name)
+        msg.setText("Arquivo Gerado com sucesso em: " + file_save_name + ".pdf")
+        msg.show()
+        line_edit_5.setText(QApplication.translate("Ui_application_pages", ""))
+        line_edit_6.setText(QApplication.translate("Ui_application_pages", ""))
+        file_save_name = ""
+        file_name = ""
 
 
 def file_save_split(self):
@@ -327,3 +364,39 @@ def file_location_split(self):
     file_name = ""
     file_name = QFileDialog.getOpenFileName()[0]
     line_edit_5.setText(QApplication.translate("Ui_application_pages", file_name))
+    
+    
+#==============================================FUNCTIONS PDFDocx==============================================================#
+    
+def clicked_docx(self):
+    global file_save_name, file_name, msg
+    if file_save_name == "" and file_name == "":
+        msg.setWindowTitle("ERRO")
+        msg.setText("Selecione os arquivos para continuar")
+        msg.show()
+    else:
+        PDFDocx.pdf_docx(self, file_save_name, file_name)
+        msg.setWindowTitle("Secesso")
+        msg.setText("Arquivo Gerado com sucesso em: " + file_save_name + ".docx")
+        msg.show()
+        line_edit_7.setText(QApplication.translate("Ui_application_pages", ""))
+        line_edit_8.setText(QApplication.translate("Ui_application_pages", ""))
+        file_save_name = ""
+        file_name = ""
+
+
+def file_save_docx(self):
+    global file_save_name
+    file_save_name = ""
+    file_save_name = QFileDialog.getSaveFileName()[0]
+    file_save_name = file_save_name.replace(".pdf", "")
+    file_save_name = file_save_name.replace(".PDF", "")
+    line_edit_8.setText(QApplication.translate(
+        "Ui_application_pages", file_save_name + ".docx"))
+
+
+def file_location_docx(self):
+    global file_name
+    file_name = ""
+    file_name = QFileDialog.getOpenFileName()[0]
+    line_edit_7.setText(QApplication.translate("Ui_application_pages", file_name))

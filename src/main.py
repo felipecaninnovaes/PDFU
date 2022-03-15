@@ -40,20 +40,17 @@ class MainWindow(QMainWindow):
         #TOGGLE BUTTOn
         self.ui.toggle_button.clicked.connect(self.toggle_button)
            
+        
         # Button home
         self.ui.home_button.clicked.connect(self.show_page_1) 
-        
         # Btn widgets
         self.ui.imageconv_button.clicked.connect(self.show_page_2)
         
         self.ui.div_button.clicked.connect(self.show_page_3)
+        
+        self.ui.docx_button.clicked.connect(self.show_page_4)
         # SHOW APPLICATION
         self.show()
-      # Change text - Home Page
-    def change_text(self):
-        text = self.ui.ui_pages.lineEdit.text()
-        new_text = "Olá, " + text
-        self.ui.ui_pages.label_3.setText(new_text)
 
     # Reset BTN Selection
     def reset_selection(self):
@@ -77,7 +74,12 @@ class MainWindow(QMainWindow):
     def show_page_3(self):
         self.reset_selection()
         self.ui.pages.setCurrentWidget(self.ui.ui_pages.page_3)
-        self.ui.div_button.set_active(True)  
+        self.ui.div_button.set_active(True)    
+
+    def show_page_4(self):
+        self.reset_selection()
+        self.ui.pages.setCurrentWidget(self.ui.ui_pages.page_4)
+        self.ui.docx_button.set_active(True)  
         
     def toggle_button(self):
         menu_width = self.ui.left_menu.width()
