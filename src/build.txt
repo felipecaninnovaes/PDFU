@@ -1,2 +1,3 @@
 MacOS: pyinstaller --windowed --onedir --name="PDFu" --clean --add-data="gui:gui" --icon=icon.ico --noconfirm main.py 
-Windows: pyinstaller --windowed --onefile --name="PDFu" --clean --add-data="gui;gui" --icon=icon.ico --noconfirm main.py 
+Windows: cxfreeze -c main.py --target-dir dist --base-name Win32GUI --icon=icon.ico -O --compress
+Linux: pyinstaller --windowed --onefile --name="PDFu" --clean --add-data="gui;gui" --icon=icon.ico --noconfirm main.py 

@@ -1,0 +1,1 @@
+cxfreeze -c main.py --target-dir dist --base-name Win32GUI --icon=icon.ico -O --compress --include-files=icon.png

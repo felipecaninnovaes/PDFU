@@ -99,7 +99,7 @@ class UI_MainWindow(QWidget):
             icon_path="icon_split.svg"
         )
         self.docx_button = PyPushButton(
-            text="PDF to Word",
+            text="PDF para Word (Beta)",
             is_active=False,
             icon_path="icon_docx.svg"
         )
@@ -389,8 +389,8 @@ def file_save_docx(self):
     global file_save_name
     file_save_name = ""
     file_save_name = QFileDialog.getSaveFileName()[0]
-    file_save_name = file_save_name.replace(".pdf", "")
-    file_save_name = file_save_name.replace(".PDF", "")
+    file_save_name = file_save_name.replace(".docx", "")
+    file_save_name = file_save_name.replace(".DOCX", "")
     line_edit_8.setText(QApplication.translate(
         "Ui_application_pages", file_save_name + ".docx"))
 

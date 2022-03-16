@@ -23,5 +23,6 @@ from PySide6.QtWidgets import *
 class PDFDocx(object):
     def pdf_docx(self, file_save_name, file_name):
         cv = Converter(file_name)
+        file_save_name = file_save_name + ".docx"
         cv.convert(file_save_name)      
         cv.close()
