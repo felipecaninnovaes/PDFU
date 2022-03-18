@@ -26,6 +26,7 @@ from modules.PDFMerge import PDFMerge
 from modules.PDFImage import PDFImage
 from modules.PDFSplit import PDFSplit
 from modules.PDFDocx import PDFDocx
+from controllers.mainController import *
 
 file_save_name = ""
 file_name = ""
@@ -234,8 +235,7 @@ class UI_MainWindow(QWidget):
         push_button6 = self.ui_pages.pushButton_6
         push_button9 = self.ui_pages.pushButton_9
         push_button12 = self.ui_pages.pushButton_12
-        global msg
-        msg = QMessageBox()
+      
         
         self.ui_pages.pushButton.clicked.connect(file_save)
         self.ui_pages.pushButton_2.clicked.connect(folder_location)
@@ -253,89 +253,44 @@ class UI_MainWindow(QWidget):
         self.ui_pages.pushButton_11.clicked.connect(file_save_docx)
         self.ui_pages.pushButton_12.clicked.connect(clicked_docx)
 
-#==============================================BASE FUNCTIONS==============================================================#
-
-def fileNameSave(lineEdit, extension):
-    global file_save_name 
-    extension = str((extension))
-    lower = extension.lower()
-    upper = extension.upper()
-    file_save_name = ""
-    file_save_name = QFileDialog.getSaveFileName()[0]
-    file_save_name = file_save_name.replace(upper, "")
-    file_save_name = file_save_name.replace(lower, "")
-    lineEdit.setText(QApplication.translate(
-        "Ui_application_pages", file_save_name + extension))
-    
-def folderLocation(lineEdit):
-    global folder
-    folder = ""
-    folder = QFileDialog.getExistingDirectory()
-    lineEdit.setText(QApplication.translate("Ui_application_pages", folder))
-
-def itemFileLocation(lineEdit):
-    global file_name
-    file_name = ""
-    file_name = QFileDialog.getOpenFileName()[0]
-    lineEdit.setText(QApplication.translate("Ui_application_pages", file_name))
-    
-def menssagen(extension, title, text):
-        global msg
-        extension = str((extension))
-        title = str((title))
-        text = str((text))
-        if extension == "":
-            msg.setWindowTitle(title)
-            msg.setText(text)
-            msg.show()
-        else:
-            msg.setWindowTitle(title)
-            msg.setText(text + file_save_name + extension)
-            msg.show()
-        
-def cleanV(lineEdit1, lineEdit2):
-    global file_name, file_save_name, folder
-    lineEdit1.setText(QApplication.translate("Ui_application_pages", ""))
-    lineEdit2.setText(QApplication.translate("Ui_application_pages", ""))
-    file_save_name = ""
-    file_name = ""
-    folder = ""
-
 #==============================================FUNCTIONS PDFMerger==============================================================#
 
 def clicked(self):
     global file_save_name, folder, msg
     if file_save_name == "" or folder == "":
-        menssagen("", "Erro", "Selecione os arquivos para continuar")
+        mainController.menssagen("", "Erro", "Selecione os arquivos para continuar")
     else:
         PDFMerge.pdf_merge(self, file_save_name, folder)
-        menssagen(".pdf", "Secesso", "Arquivo Gerado com sucesso em: ")
-        cleanV(line_edit, line_edit_2)
+        mainController.menssagen(".pdf", "Secesso", "Arquivo Gerado com sucesso em: ")
+        mainController.cleanV(line_edit, line_edit_2)
 
 def file_save(self):
-    fileNameSave(line_edit, '.pdf')
-
+    global file_save_name
+    file_save_name = mainController.fileNameSave(line_edit, '.pdf')
 
 def folder_location(self):
-    folderLocation(line_edit_2)
+    global folder
+    folder = mainController.folderLocation(line_edit_2)
     
 #==============================================FUNCTIONS PDFImage==============================================================#
     
 def clicked_img(self):
     global file_save_name, file_name, msg
     if file_save_name == "" or file_name == "":
-        menssagen("", "Erro", "Selecione os arquivos para continuar")
+        mainController.menssagen("", "Erro", "Selecione os arquivos para continuar")
     else:
         PDFImage.pdf_image(self, file_save_name, file_name)
-        menssagen(".pdf", "Secesso", "Arquivo Gerado com sucesso em: ")
-        cleanV(line_edit_3, line_edit_4)
+        mainController.menssagen(".pdf", "Secesso", "Arquivo Gerado com sucesso em: ")
+        mainController.cleanV(line_edit_3, line_edit_4)
 
 
 def file_location_img(self):
-    itemFileLocation(line_edit_3)
+    global file_name
+    file_name = mainController.itemFileLocation(line_edit_3)
     
 def file_save_img():
-    fileNameSave(line_edit_4, '.pdf')
+    global file_save_name
+    file_save_name = mainController.fileNameSave(line_edit_4, '.pdf')
 
 
 
@@ -344,18 +299,20 @@ def file_save_img():
 def clicked_split(self):
     global file_save_name, file_name, msg
     if file_save_name == "" or file_name == "":
-        menssagen("", "Erro", "Selecione os arquivos para continuar")
+        mainController.menssagen("", "Erro", "Selecione os arquivos para continuar")
     else:
         PDFSplit.pdf_split(self, file_save_name, file_name)
-        menssagen(".pdf", "Secesso", "Arquivo Gerado com sucesso em: ")
-        cleanV(line_edit_5, line_edit_6)
+        mainController.menssagen(".pdf", "Secesso", "Arquivo Gerado com sucesso em: ")
+        mainController.cleanV(line_edit_5, line_edit_6)
 
 
 def file_location_split(self):
-    itemFileLocation(line_edit_5)
+    global file_name
+    file_name = mainController.itemFileLocation(line_edit_5)
     
 def file_save_split(self):
-    fileNameSave(line_edit_6, '.pdf')
+    global file_save_name
+    file_save_name = mainController.fileNameSave(line_edit_6, '.pdf')
 
     
 #==============================================FUNCTIONS PDFDocx==============================================================#
@@ -363,15 +320,16 @@ def file_save_split(self):
 def clicked_docx(self):
     global file_save_name, file_name, msg
     if file_save_name == "" or file_name == "":
-        menssagen("", "Erro", "Selecione os arquivos para continuar")
+        mainController.menssagen("", "Erro", "Selecione os arquivos para continuar")
     else:
         PDFDocx.pdf_docx(self, file_save_name, file_name)
-        menssagen(".docx", "Secesso", "Arquivo Gerado com sucesso em: ")
-        cleanV(line_edit_7, line_edit_8)
+        mainController.menssagen(".docx", "Secesso", "Arquivo Gerado com sucesso em: ")
+        mainController.cleanV(line_edit_7, line_edit_8)
 
 def file_save_docx(self):
     global file_save_name
-    fileNameSave(line_edit_8, '.docx')
+    file_save_name = mainController.fileNameSave(line_edit_8, '.docx')
 
 def file_location_docx(self):
-    itemFileLocation(line_edit_7)
+    global file_name
+    file_name = mainController.itemFileLocation(line_edit_7)
