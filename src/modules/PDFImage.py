@@ -16,7 +16,7 @@
 
 # THIS FUNCTION NOT IMPLEMENTED IN CODE
 
-import img2pdf
+import img2pdf, os
 from PIL import Image
 
 from PySide6.QtCore import *
@@ -26,7 +26,12 @@ from PySide6.QtWidgets import *
 
 class PDFImage(object):
     def pdf_image(self, file_save_name, file_name):
-
+        if os.path.exists(file_save_name + ".pdf"):
+            os.remove(file_save_name + ".pdf")
+        elif os.path.exists(file_save_name + ".PDF"):
+            os.remove(file_save_name + ".PDF")
+        else:
+            print("Genereted a New File")
         image_file = Image.open(file_name)
         pdf_bytes = img2pdf.convert(image_file.filename)
         file_save_name = file_save_name + ".pdf"

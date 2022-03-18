@@ -15,13 +15,19 @@
 # ///////////////////////////////////////////////////////////////
 
 from pdf2docx import Converter
-
+import os
 from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
 class PDFDocx(object):
     def pdf_docx(self, file_save_name, file_name):
+        if os.path.exists(file_save_name + ".docx"):
+            os.remove(file_save_name + ".docx")
+        elif os.path.exists(file_save_name + ".DOCX"):
+            os.remove(file_save_name + ".DOCX")
+        else:
+            print("Genereted a New File")
         cv = Converter(file_name)
         file_save_name = file_save_name + ".docx"
         cv.convert(file_save_name)      

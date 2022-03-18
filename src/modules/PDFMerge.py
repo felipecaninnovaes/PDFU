@@ -26,8 +26,10 @@ class PDFMerge(object):
     def pdf_merge(self, file_save_name, folder):
         if os.path.exists(file_save_name + ".pdf"):
             os.remove(file_save_name + ".pdf")
+        elif os.path.exists(file_save_name + ".PDF"):
+            os.remove(file_save_name + ".PDF")
         else:
-            print("Gen New File")
+            print("Genereted a New File")
         if platform.system() == "Windows":
             folder_location = (folder + "\*.pdf")
         else:
@@ -43,5 +45,4 @@ class PDFMerge(object):
 
 
         pdf.remove_unreferenced_resources()
-
         pdf.save(file_save_name + ".pdf", min_version=version)
