@@ -124,7 +124,7 @@ class UI_MainWindow(QWidget):
         self.left_menu_bottom_layout.setSpacing(0)
 
         # LABEL VERSION
-        self.left_menu_label_version = QLabel("v1.0.4")
+        self.left_menu_label_version = QLabel("v1.0.5")
         self.left_menu_label_version.setAlignment(Qt.AlignCenter)
         self.left_menu_label_version.setMinimumHeight(30)
         self.left_menu_label_version.setMaximumHeight(30)
