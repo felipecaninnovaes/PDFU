@@ -294,17 +294,18 @@ def menssagen(extension, title, text):
             msg.show()
         
 def cleanV(lineEdit1, lineEdit2):
-    global file_name, file_save_name
+    global file_name, file_save_name, folder
     lineEdit1.setText(QApplication.translate("Ui_application_pages", ""))
     lineEdit2.setText(QApplication.translate("Ui_application_pages", ""))
     file_save_name = ""
     file_name = ""
+    folder = ""
 
 #==============================================FUNCTIONS PDFMerger==============================================================#
 
 def clicked(self):
     global file_save_name, folder, msg
-    if file_save_name == "" and file_name == "":
+    if file_save_name == "" or folder == "":
         menssagen("", "Erro", "Selecione os arquivos para continuar")
     else:
         PDFMerge.pdf_merge(self, file_save_name, folder)
@@ -322,7 +323,7 @@ def folder_location(self):
     
 def clicked_img(self):
     global file_save_name, file_name, msg
-    if file_save_name == "" and file_name == "":
+    if file_save_name == "" or file_name == "":
         menssagen("", "Erro", "Selecione os arquivos para continuar")
     else:
         PDFImage.pdf_image(self, file_save_name, file_name)
@@ -342,7 +343,7 @@ def file_save_img():
     
 def clicked_split(self):
     global file_save_name, file_name, msg
-    if file_save_name == "" and file_name == "":
+    if file_save_name == "" or file_name == "":
         menssagen("", "Erro", "Selecione os arquivos para continuar")
     else:
         PDFSplit.pdf_split(self, file_save_name, file_name)
@@ -361,7 +362,7 @@ def file_save_split(self):
     
 def clicked_docx(self):
     global file_save_name, file_name, msg
-    if file_save_name == "" and file_name == "":
+    if file_save_name == "" or file_name == "":
         menssagen("", "Erro", "Selecione os arquivos para continuar")
     else:
         PDFDocx.pdf_docx(self, file_save_name, file_name)
