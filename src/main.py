@@ -2,7 +2,7 @@
 #
 # BY: FELIPE CANIN NOVAES
 # PROJECT MADE WITH: PDFU
-# V: 1.0.5
+# V: 1.0.6
 #
 # This project can be used freely for all uses, as long as they maintain the
 # respective credits only in the Python scripts, any information in the visual
@@ -23,13 +23,17 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
+#Updater software
+from modules.Updater import PDFUpdater
 # IMPORT MAIN WINDOW
 from windows.main_window.ui_main_windown import *
+
 
 # MAIN WINDOW
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
+        PDFUpdater.pdf_updater(self, '1.0.6')
         
         self.setWindowTitle("PDFU")
         

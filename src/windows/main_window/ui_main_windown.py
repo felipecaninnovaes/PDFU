@@ -2,7 +2,7 @@
 #
 # BY: FELIPE CANIN NOVAES
 # PROJECT MADE WITH: PDFU
-# V: 1.0.5
+# V: 1.0.6
 #
 # This project can be used freely for all uses, as long as they maintain the
 # respective credits only in the Python scripts, any information in the visual
@@ -19,7 +19,10 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
-import time
+
+#Updater software
+from modules.Updater import PDFUpdater
+
 # IMPORT PAGES
 from pages.ui_pages import Ui_application_pages
 from modules.PDFMerge import PDFMerge
@@ -42,7 +45,6 @@ class UI_MainWindow(QWidget):
         if not parent.objectName():
             parent.setObjectName("MainWindow")
         # INITIAL PARAMETERS
-
         parent.resize(1200, 720)
         parent.setMinimumSize(960, 540)
         parent.setMaximumSize(960, 540)
@@ -213,7 +215,6 @@ class UI_MainWindow(QWidget):
         parent.setCentralWidget(self.central_frame)
 
 #==============================================VARIABLES AND FUNCTIONS==============================================================#
-        
         
         self.ui_pages = Ui_application_pages()
         self.ui_pages.setupUi(self.pages)
