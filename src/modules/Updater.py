@@ -20,19 +20,20 @@ import requests, platform, json
 from PySide6.QtWidgets import *
 
 import webbrowser
-
+resp = ''
 class PDFUpdater(object):
     def pdf_updater(self, pdfu_version):
         f = open('proxy.json')
         data = json.load(f)
+        enable = data['enable']
         proxy_ip = data['proxy_ip']
         proxy_port = data['proxy_port']
         proxy_user = data['proxy_user']
         proxy_password = data['proxy_password']
         
         proxies = {
-        'http': 'http://' + proxy_ip + ':' + proxy_port,
-        'https': 'http://' + proxy_ip + ':' + proxy_port,
+        'http': 'http://' + proxy_user + ':' + proxy_password + '@' + proxy_ip + ':' + proxy_port,
+        'https': 'http://'  + proxy_user + ':' + proxy_password + '@' + proxy_ip + ':' + proxy_port,
         }
         
         os = platform.system()
@@ -41,7 +42,7 @@ class PDFUpdater(object):
         if proxy_ip == '0' :
             resp = requests.get(url)
         else :
-            resp = requests.get(url, proxies=proxies, auth=(proxy_user, proxy_password))
+            resp = requests.get(url, proxies=proxies)
             
         resp = resp.json()
         version = resp['tag_name']

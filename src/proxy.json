@@ -1,4 +1,5 @@
 {
+    "enable": "1",
     "proxy_ip" : "0",
     "proxy_port": "0",
     "proxy_user": "",

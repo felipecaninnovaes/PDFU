@@ -16,7 +16,7 @@
 
 
 # IMPORT MODULES    
-import sys
+import sys, json
 
 # IMPORT QT CORE
 from PySide6.QtCore import *
@@ -33,7 +33,13 @@ from windows.main_window.ui_main_windown import *
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        PDFUpdater.pdf_updater(self, '1.0.7')
+        f = open('proxy.json')
+        data = json.load(f)
+        enable = data['enable']
+        if enable == '1':
+            PDFUpdater.pdf_updater(self, '1.0.7')
+        elif enable == '0':
+            print('Disable updater')
         
         self.setWindowTitle("PDFU")
         
