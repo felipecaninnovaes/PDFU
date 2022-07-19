@@ -32,8 +32,8 @@ class PyPushButton(QPushButton):
         text_color = "#ded5de",
         icon_path = "",
         icon_color = "#ded5de",
-        btn_color = "#FF4742",
-        btn_hover = "#DE403A",
+        btn_color = "#E74856",
+        btn_hover = "#CF404C",
         btn_pressed = "#F5F5F5",
         is_active = False
     ):
@@ -80,8 +80,8 @@ class PyPushButton(QPushButton):
         self,
         text_padding = 55,
         text_color = "#ded5de",
-        btn_color = "#FF4742",
-        btn_hover = "#DE403A",
+        btn_color = "#E74856",
+        btn_hover = "#CF404C",
         btn_pressed = "#F5F5F5",
         is_active = False
     ):

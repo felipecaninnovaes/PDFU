@@ -66,7 +66,7 @@ margin-left: 300px;
 font-size: 14px;</string>
          </property>
          <property name="text">
-          <string>Abrir em:    </string>
+          <string>Abrir em:   </string>
          </property>
         </widget>
        </item>
@@ -81,12 +81,13 @@ font-size: 14px;</string>
          <property name="styleSheet">
           <string notr="true">QLineEdit {
     padding-top: 16px;
+	background: #ECECEC	;
     width: 100%;
     height: 30px;
     color: #333;
     font-style: normal;
     font-size: 14px;
-    border: 2px solid #dcdce6;
+    border: 1px solid #E74856;
     border-radius: 3px;
     padding: 0 24px;
 }
@@ -125,9 +126,8 @@ font-size: 14px;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    background: #FF4742;
-    border: 1px solid #FF4742;
-    border-radius: 6px;
+    background: #E74856;
+    border: 1px solid #E74856;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 800;
@@ -137,6 +137,8 @@ font-size: 14px;</string>
     vertical-align: middle;
     padding-right: 15px;
     padding-left: 15px;
+  	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 
 }
 
@@ -189,12 +191,13 @@ font-size: 14px;</string>
          <property name="styleSheet">
           <string notr="true">QLineEdit {
     padding-top: 16px;
+	background: #ECECEC	;
     width: 100%;
     height: 30px;
     color: #333;
     font-style: normal;
     font-size: 14px;
-    border: 2px solid #dcdce6;
+    border: 1px solid #E74856;
     border-radius: 3px;
     padding: 0 24px;
 }
@@ -230,9 +233,8 @@ font-size: 14px;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    background: #FF4742;
-    border: 1px solid #FF4742;
-    border-radius: 6px;
+    background: #E74856;
+    border: 1px solid #E74856;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 800;
@@ -242,6 +244,8 @@ font-size: 14px;</string>
     vertical-align: middle;
     padding-right: 15px;
     padding-left: 15px;
+  	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 
 }
 
@@ -288,9 +292,8 @@ QPushButton:hover {
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    background: #FF4742;
-    border: 1px solid #FF4742;
-    border-radius: 6px;
+    background: #E74856;
+    border: 1px solid #E74856;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 800;
@@ -300,6 +303,8 @@ QPushButton:hover {
     vertical-align: middle;
     padding-right: 15px;
     padding-left: 15px;
+  	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 
 }
 
@@ -357,7 +362,7 @@ font-family: sans-serif;
 font-size: 14px;</string>
          </property>
          <property name="text">
-          <string>Abrir em:    </string>
+          <string>Abrir em:   </string>
          </property>
         </widget>
        </item>
@@ -372,12 +377,13 @@ font-size: 14px;</string>
          <property name="styleSheet">
           <string notr="true">QLineEdit {
     padding-top: 16px;
+	background: #ECECEC	;
     width: 100%;
     height: 30px;
     color: #333;
     font-style: normal;
     font-size: 14px;
-    border: 2px solid #dcdce6;
+    border: 1px solid #E74856;
     border-radius: 3px;
     padding: 0 24px;
 }
@@ -416,9 +422,8 @@ font-size: 14px;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    background: #FF4742;
-    border: 1px solid #FF4742;
-    border-radius: 6px;
+    background: #E74856;
+    border: 1px solid #E74856;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 800;
@@ -428,6 +433,8 @@ font-size: 14px;</string>
     vertical-align: middle;
     padding-right: 15px;
     padding-left: 15px;
+  	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 
 }
 
@@ -480,12 +487,13 @@ font-size: 14px;</string>
          <property name="styleSheet">
           <string notr="true">QLineEdit {
     padding-top: 16px;
+	background: #ECECEC	;
     width: 100%;
     height: 30px;
     color: #333;
     font-style: normal;
     font-size: 14px;
-    border: 2px solid #dcdce6;
+    border: 1px solid #E74856;
     border-radius: 3px;
     padding: 0 24px;
 }
@@ -521,9 +529,8 @@ font-size: 14px;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    background: #FF4742;
-    border: 1px solid #FF4742;
-    border-radius: 6px;
+    background: #E74856;
+    border: 1px solid #E74856;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 800;
@@ -533,6 +540,8 @@ font-size: 14px;</string>
     vertical-align: middle;
     padding-right: 15px;
     padding-left: 15px;
+  	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 
 }
 
@@ -579,9 +588,8 @@ QPushButton:hover {
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    background: #FF4742;
-    border: 1px solid #FF4742;
-    border-radius: 6px;
+    background: #E74856;
+    border: 1px solid #E74856;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 800;
@@ -591,6 +599,8 @@ QPushButton:hover {
     vertical-align: middle;
     padding-right: 15px;
     padding-left: 15px;
+  	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 
 }
 
@@ -648,7 +658,7 @@ font-family: sans-serif;
 font-size: 14px;</string>
          </property>
          <property name="text">
-          <string>Abrir em:    </string>
+          <string>Abrir em:   </string>
          </property>
         </widget>
        </item>
@@ -663,12 +673,13 @@ font-size: 14px;</string>
          <property name="styleSheet">
           <string notr="true">QLineEdit {
     padding-top: 16px;
+	background: #ECECEC	;
     width: 100%;
     height: 30px;
     color: #333;
     font-style: normal;
     font-size: 14px;
-    border: 2px solid #dcdce6;
+    border: 1px solid #E74856;
     border-radius: 3px;
     padding: 0 24px;
 }
@@ -707,9 +718,8 @@ font-size: 14px;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    background: #FF4742;
-    border: 1px solid #FF4742;
-    border-radius: 6px;
+    background: #E74856;
+    border: 1px solid #E74856;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 800;
@@ -719,6 +729,8 @@ font-size: 14px;</string>
     vertical-align: middle;
     padding-right: 15px;
     padding-left: 15px;
+  	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 
 }
 
@@ -771,12 +783,13 @@ font-size: 14px;</string>
          <property name="styleSheet">
           <string notr="true">QLineEdit {
     padding-top: 16px;
+	background: #ECECEC	;
     width: 100%;
     height: 30px;
     color: #333;
     font-style: normal;
     font-size: 14px;
-    border: 2px solid #dcdce6;
+    border: 1px solid #E74856;
     border-radius: 3px;
     padding: 0 24px;
 }
@@ -812,9 +825,8 @@ font-size: 14px;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    background: #FF4742;
-    border: 1px solid #FF4742;
-    border-radius: 6px;
+    background: #E74856;
+    border: 1px solid #E74856;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 800;
@@ -824,6 +836,8 @@ font-size: 14px;</string>
     vertical-align: middle;
     padding-right: 15px;
     padding-left: 15px;
+  	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 
 }
 
@@ -870,9 +884,8 @@ QPushButton:hover {
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    background: #FF4742;
-    border: 1px solid #FF4742;
-    border-radius: 6px;
+    background: #E74856;
+    border: 1px solid #E74856;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 800;
@@ -882,6 +895,8 @@ QPushButton:hover {
     vertical-align: middle;
     padding-right: 15px;
     padding-left: 15px;
+  	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 
 }
 
@@ -939,7 +954,7 @@ font-family: sans-serif;
 font-size: 14px;</string>
          </property>
          <property name="text">
-          <string>Abrir em:    </string>
+          <string>Abrir em:   </string>
          </property>
         </widget>
        </item>
@@ -954,12 +969,13 @@ font-size: 14px;</string>
          <property name="styleSheet">
           <string notr="true">QLineEdit {
     padding-top: 16px;
+	background: #ECECEC	;
     width: 100%;
     height: 30px;
     color: #333;
     font-style: normal;
     font-size: 14px;
-    border: 2px solid #dcdce6;
+    border: 1px solid #E74856;
     border-radius: 3px;
     padding: 0 24px;
 }
@@ -998,9 +1014,8 @@ font-size: 14px;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    background: #FF4742;
-    border: 1px solid #FF4742;
-    border-radius: 6px;
+    background: #E74856;
+    border: 1px solid #E74856;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 800;
@@ -1010,6 +1025,8 @@ font-size: 14px;</string>
     vertical-align: middle;
     padding-right: 15px;
     padding-left: 15px;
+  	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 
 }
 
@@ -1062,12 +1079,13 @@ font-size: 14px;</string>
          <property name="styleSheet">
           <string notr="true">QLineEdit {
     padding-top: 16px;
+	background: #ECECEC	;
     width: 100%;
     height: 30px;
     color: #333;
     font-style: normal;
     font-size: 14px;
-    border: 2px solid #dcdce6;
+    border: 1px solid #E74856;
     border-radius: 3px;
     padding: 0 24px;
 }
@@ -1103,9 +1121,8 @@ font-size: 14px;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    background: #FF4742;
-    border: 1px solid #FF4742;
-    border-radius: 6px;
+    background: #E74856;
+    border: 1px solid #E74856;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 800;
@@ -1115,6 +1132,8 @@ font-size: 14px;</string>
     vertical-align: middle;
     padding-right: 15px;
     padding-left: 15px;
+  	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 
 }
 
@@ -1161,9 +1180,8 @@ QPushButton:hover {
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton {
-    background: #FF4742;
-    border: 1px solid #FF4742;
-    border-radius: 6px;
+    background: #E74856;
+    border: 1px solid #E74856;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 800;
@@ -1173,6 +1191,8 @@ QPushButton:hover {
     vertical-align: middle;
     padding-right: 15px;
     padding-left: 15px;
+  	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 
 }
 

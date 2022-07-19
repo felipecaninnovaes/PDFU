@@ -58,7 +58,7 @@ class UI_MainWindow(QWidget):
 
         # LEFT MENU
         self.left_menu = QFrame()
-        self.left_menu.setStyleSheet("background-color: #FF4742")
+        self.left_menu.setStyleSheet("background-color: #E74856")
         self.left_menu.setMaximumWidth(50)
         self.left_menu.setMinimumWidth(50)
 

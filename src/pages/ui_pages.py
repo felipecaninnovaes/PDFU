@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'pages.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.2.3
+## Created by: Qt User Interface Compiler version 6.3.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -59,12 +59,13 @@ class Ui_application_pages(object):
         self.lineEdit_2.setMaximumSize(QSize(960, 24))
         self.lineEdit_2.setStyleSheet(u"QLineEdit {\n"
 "    padding-top: 16px;\n"
+"	background: #ECECEC	;\n"
 "    width: 100%;\n"
 "    height: 30px;\n"
 "    color: #333;\n"
 "    font-style: normal;\n"
 "    font-size: 14px;\n"
-"    border: 2px solid #dcdce6;\n"
+"    border: 1px solid #E74856;\n"
 "    border-radius: 3px;\n"
 "    padding: 0 24px;\n"
 "}\n"
@@ -84,9 +85,8 @@ class Ui_application_pages(object):
         self.pushButton_2.setBaseSize(QSize(0, 0))
         self.pushButton_2.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_2.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
+"    background: #E74856;\n"
+"    border: 1px solid #E74856;\n"
 "    color: #FFFFFF;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
@@ -96,6 +96,8 @@ class Ui_application_pages(object):
 "    vertical-align: middle;\n"
 "    padding-right: 15px;\n"
 "    padding-left: 15px;\n"
+"  	border-radius: 2px;\n"
+"	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n"
 "\n"
 "}\n"
 "\n"
@@ -127,12 +129,13 @@ class Ui_application_pages(object):
         self.lineEdit.setMaximumSize(QSize(960, 24))
         self.lineEdit.setStyleSheet(u"QLineEdit {\n"
 "    padding-top: 16px;\n"
+"	background: #ECECEC	;\n"
 "    width: 100%;\n"
 "    height: 30px;\n"
 "    color: #333;\n"
 "    font-style: normal;\n"
 "    font-size: 14px;\n"
-"    border: 2px solid #dcdce6;\n"
+"    border: 1px solid #E74856;\n"
 "    border-radius: 3px;\n"
 "    padding: 0 24px;\n"
 "}\n"
@@ -149,9 +152,8 @@ class Ui_application_pages(object):
         self.pushButton.setBaseSize(QSize(0, 0))
         self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
+"    background: #E74856;\n"
+"    border: 1px solid #E74856;\n"
 "    color: #FFFFFF;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
@@ -161,6 +163,8 @@ class Ui_application_pages(object):
 "    vertical-align: middle;\n"
 "    padding-right: 15px;\n"
 "    padding-left: 15px;\n"
+"  	border-radius: 2px;\n"
+"	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n"
 "\n"
 "}\n"
 "\n"
@@ -186,9 +190,8 @@ class Ui_application_pages(object):
         self.pushButton_3.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_3.setLayoutDirection(Qt.LeftToRight)
         self.pushButton_3.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
+"    background: #E74856;\n"
+"    border: 1px solid #E74856;\n"
 "    color: #FFFFFF;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
@@ -198,6 +201,8 @@ class Ui_application_pages(object):
 "    vertical-align: middle;\n"
 "    padding-right: 15px;\n"
 "    padding-left: 15px;\n"
+"  	border-radius: 2px;\n"
+"	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n"
 "\n"
 "}\n"
 "\n"
@@ -246,12 +251,13 @@ class Ui_application_pages(object):
         self.lineEdit_3.setMaximumSize(QSize(960, 24))
         self.lineEdit_3.setStyleSheet(u"QLineEdit {\n"
 "    padding-top: 16px;\n"
+"	background: #ECECEC	;\n"
 "    width: 100%;\n"
 "    height: 30px;\n"
 "    color: #333;\n"
 "    font-style: normal;\n"
 "    font-size: 14px;\n"
-"    border: 2px solid #dcdce6;\n"
+"    border: 1px solid #E74856;\n"
 "    border-radius: 3px;\n"
 "    padding: 0 24px;\n"
 "}\n"
@@ -268,9 +274,8 @@ class Ui_application_pages(object):
         self.pushButton_4.setBaseSize(QSize(0, 0))
         self.pushButton_4.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_4.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
+"    background: #E74856;\n"
+"    border: 1px solid #E74856;\n"
 "    color: #FFFFFF;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
@@ -280,6 +285,8 @@ class Ui_application_pages(object):
 "    vertical-align: middle;\n"
 "    padding-right: 15px;\n"
 "    padding-left: 15px;\n"
+"  	border-radius: 2px;\n"
+"	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n"
 "\n"
 "}\n"
 "\n"
@@ -311,12 +318,13 @@ class Ui_application_pages(object):
         self.lineEdit_4.setMaximumSize(QSize(960, 24))
         self.lineEdit_4.setStyleSheet(u"QLineEdit {\n"
 "    padding-top: 16px;\n"
+"	background: #ECECEC	;\n"
 "    width: 100%;\n"
 "    height: 30px;\n"
 "    color: #333;\n"
 "    font-style: normal;\n"
 "    font-size: 14px;\n"
-"    border: 2px solid #dcdce6;\n"
+"    border: 1px solid #E74856;\n"
 "    border-radius: 3px;\n"
 "    padding: 0 24px;\n"
 "}\n"
@@ -333,9 +341,8 @@ class Ui_application_pages(object):
         self.pushButton_5.setBaseSize(QSize(0, 0))
         self.pushButton_5.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_5.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
+"    background: #E74856;\n"
+"    border: 1px solid #E74856;\n"
 "    color: #FFFFFF;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
@@ -345,6 +352,8 @@ class Ui_application_pages(object):
 "    vertical-align: middle;\n"
 "    padding-right: 15px;\n"
 "    padding-left: 15px;\n"
+"  	border-radius: 2px;\n"
+"	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n"
 "\n"
 "}\n"
 "\n"
@@ -370,9 +379,8 @@ class Ui_application_pages(object):
         self.pushButton_6.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_6.setLayoutDirection(Qt.LeftToRight)
         self.pushButton_6.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
+"    background: #E74856;\n"
+"    border: 1px solid #E74856;\n"
 "    color: #FFFFFF;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
@@ -382,6 +390,8 @@ class Ui_application_pages(object):
 "    vertical-align: middle;\n"
 "    padding-right: 15px;\n"
 "    padding-left: 15px;\n"
+"  	border-radius: 2px;\n"
+"	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n"
 "\n"
 "}\n"
 "\n"
@@ -430,12 +440,13 @@ class Ui_application_pages(object):
         self.lineEdit_5.setMaximumSize(QSize(960, 24))
         self.lineEdit_5.setStyleSheet(u"QLineEdit {\n"
 "    padding-top: 16px;\n"
+"	background: #ECECEC	;\n"
 "    width: 100%;\n"
 "    height: 30px;\n"
 "    color: #333;\n"
 "    font-style: normal;\n"
 "    font-size: 14px;\n"
-"    border: 2px solid #dcdce6;\n"
+"    border: 1px solid #E74856;\n"
 "    border-radius: 3px;\n"
 "    padding: 0 24px;\n"
 "}\n"
@@ -452,9 +463,8 @@ class Ui_application_pages(object):
         self.pushButton_7.setBaseSize(QSize(0, 0))
         self.pushButton_7.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_7.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
+"    background: #E74856;\n"
+"    border: 1px solid #E74856;\n"
 "    color: #FFFFFF;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
@@ -464,6 +474,8 @@ class Ui_application_pages(object):
 "    vertical-align: middle;\n"
 "    padding-right: 15px;\n"
 "    padding-left: 15px;\n"
+"  	border-radius: 2px;\n"
+"	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n"
 "\n"
 "}\n"
 "\n"
@@ -495,12 +507,13 @@ class Ui_application_pages(object):
         self.lineEdit_6.setMaximumSize(QSize(960, 24))
         self.lineEdit_6.setStyleSheet(u"QLineEdit {\n"
 "    padding-top: 16px;\n"
+"	background: #ECECEC	;\n"
 "    width: 100%;\n"
 "    height: 30px;\n"
 "    color: #333;\n"
 "    font-style: normal;\n"
 "    font-size: 14px;\n"
-"    border: 2px solid #dcdce6;\n"
+"    border: 1px solid #E74856;\n"
 "    border-radius: 3px;\n"
 "    padding: 0 24px;\n"
 "}\n"
@@ -517,9 +530,8 @@ class Ui_application_pages(object):
         self.pushButton_8.setBaseSize(QSize(0, 0))
         self.pushButton_8.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_8.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
+"    background: #E74856;\n"
+"    border: 1px solid #E74856;\n"
 "    color: #FFFFFF;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
@@ -529,6 +541,8 @@ class Ui_application_pages(object):
 "    vertical-align: middle;\n"
 "    padding-right: 15px;\n"
 "    padding-left: 15px;\n"
+"  	border-radius: 2px;\n"
+"	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n"
 "\n"
 "}\n"
 "\n"
@@ -554,9 +568,8 @@ class Ui_application_pages(object):
         self.pushButton_9.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_9.setLayoutDirection(Qt.LeftToRight)
         self.pushButton_9.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
+"    background: #E74856;\n"
+"    border: 1px solid #E74856;\n"
 "    color: #FFFFFF;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
@@ -566,6 +579,8 @@ class Ui_application_pages(object):
 "    vertical-align: middle;\n"
 "    padding-right: 15px;\n"
 "    padding-left: 15px;\n"
+"  	border-radius: 2px;\n"
+"	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n"
 "\n"
 "}\n"
 "\n"
@@ -614,12 +629,13 @@ class Ui_application_pages(object):
         self.lineEdit_7.setMaximumSize(QSize(960, 24))
         self.lineEdit_7.setStyleSheet(u"QLineEdit {\n"
 "    padding-top: 16px;\n"
+"	background: #ECECEC	;\n"
 "    width: 100%;\n"
 "    height: 30px;\n"
 "    color: #333;\n"
 "    font-style: normal;\n"
 "    font-size: 14px;\n"
-"    border: 2px solid #dcdce6;\n"
+"    border: 1px solid #E74856;\n"
 "    border-radius: 3px;\n"
 "    padding: 0 24px;\n"
 "}\n"
@@ -636,9 +652,8 @@ class Ui_application_pages(object):
         self.pushButton_10.setBaseSize(QSize(0, 0))
         self.pushButton_10.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_10.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
+"    background: #E74856;\n"
+"    border: 1px solid #E74856;\n"
 "    color: #FFFFFF;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
@@ -648,6 +663,8 @@ class Ui_application_pages(object):
 "    vertical-align: middle;\n"
 "    padding-right: 15px;\n"
 "    padding-left: 15px;\n"
+"  	border-radius: 2px;\n"
+"	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n"
 "\n"
 "}\n"
 "\n"
@@ -679,12 +696,13 @@ class Ui_application_pages(object):
         self.lineEdit_8.setMaximumSize(QSize(960, 24))
         self.lineEdit_8.setStyleSheet(u"QLineEdit {\n"
 "    padding-top: 16px;\n"
+"	background: #ECECEC	;\n"
 "    width: 100%;\n"
 "    height: 30px;\n"
 "    color: #333;\n"
 "    font-style: normal;\n"
 "    font-size: 14px;\n"
-"    border: 2px solid #dcdce6;\n"
+"    border: 1px solid #E74856;\n"
 "    border-radius: 3px;\n"
 "    padding: 0 24px;\n"
 "}\n"
@@ -701,9 +719,8 @@ class Ui_application_pages(object):
         self.pushButton_11.setBaseSize(QSize(0, 0))
         self.pushButton_11.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_11.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
+"    background: #E74856;\n"
+"    border: 1px solid #E74856;\n"
 "    color: #FFFFFF;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
@@ -713,6 +730,8 @@ class Ui_application_pages(object):
 "    vertical-align: middle;\n"
 "    padding-right: 15px;\n"
 "    padding-left: 15px;\n"
+"  	border-radius: 2px;\n"
+"	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n"
 "\n"
 "}\n"
 "\n"
@@ -738,9 +757,8 @@ class Ui_application_pages(object):
         self.pushButton_12.setCursor(QCursor(Qt.PointingHandCursor))
         self.pushButton_12.setLayoutDirection(Qt.LeftToRight)
         self.pushButton_12.setStyleSheet(u"QPushButton {\n"
-"    background: #FF4742;\n"
-"    border: 1px solid #FF4742;\n"
-"    border-radius: 6px;\n"
+"    background: #E74856;\n"
+"    border: 1px solid #E74856;\n"
 "    color: #FFFFFF;\n"
 "    font-size: 16px;\n"
 "    font-weight: 800;\n"
@@ -750,6 +768,8 @@ class Ui_application_pages(object):
 "    vertical-align: middle;\n"
 "    padding-right: 15px;\n"
 "    padding-left: 15px;\n"
+"  	border-radius: 2px;\n"
+"	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n"
 "\n"
 "}\n"
 "\n"
@@ -772,28 +792,28 @@ class Ui_application_pages(object):
     def retranslateUi(self, application_pages):
         application_pages.setWindowTitle(QCoreApplication.translate("application_pages", u"StackedWidget", None))
         self.label_6.setText(QCoreApplication.translate("application_pages", u"Juntar PDFS", None))
-        self.label_2.setText(QCoreApplication.translate("application_pages", u"Abrir em:    ", None))
+        self.label_2.setText(QCoreApplication.translate("application_pages", u"Abrir em:   ", None))
         self.lineEdit_2.setText("")
         self.pushButton_2.setText(QCoreApplication.translate("application_pages", u"...", None))
         self.label.setText(QCoreApplication.translate("application_pages", u"Salvar em: ", None))
         self.pushButton.setText(QCoreApplication.translate("application_pages", u"...", None))
         self.pushButton_3.setText(QCoreApplication.translate("application_pages", u"SALVAR", None))
         self.label_5.setText(QCoreApplication.translate("application_pages", u"Converter para PDF", None))
-        self.label_3.setText(QCoreApplication.translate("application_pages", u"Abrir em:    ", None))
+        self.label_3.setText(QCoreApplication.translate("application_pages", u"Abrir em:   ", None))
         self.lineEdit_3.setText("")
         self.pushButton_4.setText(QCoreApplication.translate("application_pages", u"...", None))
         self.label_4.setText(QCoreApplication.translate("application_pages", u"Salvar em: ", None))
         self.pushButton_5.setText(QCoreApplication.translate("application_pages", u"...", None))
         self.pushButton_6.setText(QCoreApplication.translate("application_pages", u"SALVAR", None))
         self.label_9.setText(QCoreApplication.translate("application_pages", u"Dividir PDFS", None))
-        self.label_8.setText(QCoreApplication.translate("application_pages", u"Abrir em:    ", None))
+        self.label_8.setText(QCoreApplication.translate("application_pages", u"Abrir em:   ", None))
         self.lineEdit_5.setText("")
         self.pushButton_7.setText(QCoreApplication.translate("application_pages", u"...", None))
         self.label_7.setText(QCoreApplication.translate("application_pages", u"Salvar em: ", None))
         self.pushButton_8.setText(QCoreApplication.translate("application_pages", u"...", None))
         self.pushButton_9.setText(QCoreApplication.translate("application_pages", u"SALVAR", None))
         self.label_11.setText(QCoreApplication.translate("application_pages", u"Converter para Word", None))
-        self.label_12.setText(QCoreApplication.translate("application_pages", u"Abrir em:    ", None))
+        self.label_12.setText(QCoreApplication.translate("application_pages", u"Abrir em:   ", None))
         self.lineEdit_7.setText("")
         self.pushButton_10.setText(QCoreApplication.translate("application_pages", u"...", None))
         self.label_10.setText(QCoreApplication.translate("application_pages", u"Salvar em: ", None))
