@@ -2,7 +2,7 @@
 #
 # BY: FELIPE CANIN NOVAES
 # PROJECT MADE WITH: PDFU
-# V: 1.0.7
+# V: 1.0.8
 #
 # This project can be used freely for all uses, as long as they maintain the
 # respective credits only in the Python scripts, any information in the visual
@@ -16,6 +16,8 @@
 
 
 # IMPORT MODULES    
+import multiprocessing
+from multiprocessing.dummy import freeze_support
 import sys, json
 
 # IMPORT QT CORE
@@ -28,16 +30,30 @@ from modules.Updater import PDFUpdater
 # IMPORT MAIN WINDOW
 from windows.main_window.ui_main_windown import *
 
+version = '1.0.8'
+
 
 # MAIN WINDOW
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        f = open('proxy.json')
-        data = json.load(f)
+        try:
+            proxy = open('proxy.json', 'r+')
+        except FileNotFoundError:
+            proxy = open('proxy.json', 'w+')
+            proxy.writelines(u'{' +"\n")
+            proxy.writelines(u'"enable": "1",' +"\n")
+            proxy.writelines(u'"proxy_ip": "0",' +"\n")
+            proxy.writelines(u'"proxy_port": "0",' +"\n")
+            proxy.writelines(u'"proxy_user": "",' +"\n")
+            proxy.writelines(u'"proxy_password": ""' +"\n")
+            proxy.writelines(u'}' +"\n")
+            proxy = open('proxy.json')
+        
+        data = json.load(proxy)
         enable = data['enable']
         if enable == '1':
-            PDFUpdater.pdf_updater(self, '1.0.7')
+            PDFUpdater.pdf_updater(self, version)
         elif enable == '0':
             print('Disable updater')
         

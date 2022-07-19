@@ -23,8 +23,8 @@ import webbrowser
 resp = ''
 class PDFUpdater(object):
     def pdf_updater(self, pdfu_version):
-        f = open('proxy.json')
-        data = json.load(f)
+        proxy = open('proxy.json', 'r+')
+        data = json.load(proxy)
         enable = data['enable']
         proxy_ip = data['proxy_ip']
         proxy_port = data['proxy_port']
@@ -46,7 +46,6 @@ class PDFUpdater(object):
             
         resp = resp.json()
         version = resp['tag_name']
-        print (version)
         
         if pdfu_version == version :
             return 0
