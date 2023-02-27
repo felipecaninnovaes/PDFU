@@ -2,7 +2,7 @@
 #
 # BY: FELIPE CANIN NOVAES
 # PROJECT MADE WITH: PDFU
-# V: 1.0.8
+# V: 1.0.9
 #
 # This project can be used freely for all uses, as long as they maintain the
 # respective credits only in the Python scripts, any information in the visual
@@ -30,7 +30,7 @@ from modules.Updater import PDFUpdater
 # IMPORT MAIN WINDOW
 from windows.main_window.ui_main_windown import *
 
-version = '1.0.8'
+version = '1.0.9'
 
 
 # MAIN WINDOW
