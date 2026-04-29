@@ -17,6 +17,9 @@ dependencies = [
 
 [tool.uv]
 package = false
+dev-dependencies = [
+    "pyinstaller>=6.0",
+]
 
 [build-system]
 requires = ["hatchling"]

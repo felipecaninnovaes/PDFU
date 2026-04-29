@@ -1,3 +1,41 @@
-MacOS: pyinstaller --windowed --onedir --name="PDFu" --clean --add-data="widgets:widgets" --icon=icon.ico --noconfirm main.py 
-Windows: cxfreeze -c main.py --target-dir dist --base-name Win32GUI --icon=icon.ico -O --compress
-Linux: python3 -m PyInstaller --onefile --name="PDFu" --clean --add-data="widgets:widgets" --icon=icon.ico --noconfirm main.py
+== PDFU v2 — Build Instructions ==
+
+Pré-requisito: instalar pyinstaller no projeto
+  uv sync  (já inclui pyinstaller como dev-dependency)
+
+-- Windows --
+  Executar: PDFu_Build_Windows.bat
+  Ou manualmente (dentro de src/):
+    uv run pyinstaller --windowed --onedir --name="PDFu" --clean ^
+        --icon=icon.ico ^
+        --add-data "assets;assets" ^
+        --add-data "icon.png;." ^
+        --add-data "proxy.json;." ^
+        --hidden-import PySide6.QtSvg ^
+        --collect-all pdf2docx ^
+        --collect-all fitz ^
+        --noconfirm main.py
+
+-- macOS --
+  uv run pyinstaller --windowed --onedir --name="PDFu" --clean \
+      --icon=icon.ico \
+      --add-data "assets:assets" \
+      --add-data "icon.png:." \
+      --add-data "proxy.json:." \
+      --hidden-import PySide6.QtSvg \
+      --collect-all pdf2docx \
+      --collect-all fitz \
+      --noconfirm main.py
+
+-- Linux --
+  uv run pyinstaller --windowed --onedir --name="PDFu" --clean \
+      --add-data "assets:assets" \
+      --add-data "icon.png:." \
+      --add-data "proxy.json:." \
+      --hidden-import PySide6.QtSvg \
+      --collect-all pdf2docx \
+      --collect-all fitz \
+      --noconfirm main.py
+
+Nota: separador --add-data é ";" no Windows e ":" em macOS/Linux.
+Saída: src/dist/PDFu/

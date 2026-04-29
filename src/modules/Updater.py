@@ -5,6 +5,14 @@ import requests
 from PySide6.QtWidgets import QMessageBox
 
 
+def _parse_version(v: str) -> tuple:
+    v = v.lstrip("v").strip()
+    try:
+        return tuple(int(x) for x in v.split("."))
+    except ValueError:
+        return (0,)
+
+
 def check_for_updates(parent, current_version: str, proxy_path: str = "proxy.json") -> None:
     try:
         with open(proxy_path) as f:
@@ -32,7 +40,7 @@ def check_for_updates(parent, current_version: str, proxy_path: str = "proxy.jso
     except Exception:
         return
 
-    if latest == current_version:
+    if _parse_version(latest) <= _parse_version(current_version):
         return
 
     answer = QMessageBox.question(
