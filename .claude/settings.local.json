@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -v '^\\\\.$')",
+      "Bash(awk ' *)",
+      "Bash(python -c \"from PySide6.QtSvg import QSvgRenderer; print\\('SVG OK'\\)\")",
+      "Bash(uv --version)",
+      "Bash(uv sync *)",
+      "Bash(uv run --project .. python -c ' *)",
+      "Bash(git rm *)"
+    ]
+  }
+}

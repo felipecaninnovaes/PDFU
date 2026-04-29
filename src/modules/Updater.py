@@ -1,62 +1,53 @@
-#///////////////////////////////////////////////////////////////
-#
-# BY: FELIPE CANIN NOVAES
-# PROJECT MADE WITH: PDFU
-# V: 1.0.9
-#
-# This project can be used freely for all uses, as long as they maintain the
-# respective credits only in the Python scripts, any information in the visual
-# interface (GUI) can be modified without any implication.
-#
-# There are limitations on Qt licenses if you want to use your products
-# commercially, I recommend reading them on the official website:
-# https://doc.qt.io/qtforpython/licenses.html
-#
-# ///////////////////////////////////////////////////////////////
-
-
-
-import requests, platform, json
-from PySide6.QtWidgets import *
-
+import json
+import platform
 import webbrowser
-resp = ''
-class PDFUpdater(object):
-    def pdf_updater(self, pdfu_version):
-        proxy = open('proxy.json', 'r+')
-        data = json.load(proxy)
-        enable = data['enable']
-        proxy_ip = data['proxy_ip']
-        proxy_port = data['proxy_port']
-        proxy_user = data['proxy_user']
-        proxy_password = data['proxy_password']
-        
-        proxies = {
-        'http': 'http://' + proxy_user + ':' + proxy_password + '@' + proxy_ip + ':' + proxy_port,
-        'https': 'http://'  + proxy_user + ':' + proxy_password + '@' + proxy_ip + ':' + proxy_port,
+import requests
+from PySide6.QtWidgets import QMessageBox
+
+
+def check_for_updates(parent, current_version: str, proxy_path: str = "proxy.json") -> None:
+    try:
+        with open(proxy_path) as f:
+            cfg = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        cfg = {"enable": "0", "proxy_ip": "0", "proxy_port": "0", "proxy_user": "", "proxy_password": ""}
+
+    if cfg.get("enable") != "1":
+        return
+
+    proxies = None
+    if cfg.get("proxy_ip", "0") != "0":
+        auth = f"{cfg['proxy_user']}:{cfg['proxy_password']}@" if cfg.get("proxy_user") else ""
+        proxy_url = f"http://{auth}{cfg['proxy_ip']}:{cfg['proxy_port']}"
+        proxies = {"http": proxy_url, "https": proxy_url}
+
+    try:
+        resp = requests.get(
+            "https://api.github.com/repos/felipecaninnovaes/PDFU/releases/latest",
+            proxies=proxies,
+            timeout=5,
+        )
+        data = resp.json()
+        latest = data.get("tag_name", current_version)
+    except Exception:
+        return
+
+    if latest == current_version:
+        return
+
+    answer = QMessageBox.question(
+        parent,
+        "Atualização disponível",
+        f"Nova versão disponível: {latest}\nDeseja baixar agora?",
+        QMessageBox.Yes | QMessageBox.No,
+    )
+    if answer == QMessageBox.Yes:
+        os_name = platform.system()
+        urls = {
+            "Darwin": f"https://github.com/felipecaninnovaes/PDFU/releases/download/{latest}/PDFU_Setup_{latest}_MacOS.dmg",
+            "Linux": f"https://github.com/felipecaninnovaes/PDFU/releases/download/{latest}/PDFU_Setup_{latest}_Linux.zip",
+            "Windows": f"https://github.com/felipecaninnovaes/PDFU/releases/download/{latest}/PDFU_Setup_{latest}_Windows.exe",
         }
-        
-        os = platform.system()
-        url= "https://api.github.com/repos/felipecaninnovaes/PDFU/releases/latest"
-        
-        if proxy_ip == '0' :
-            resp = requests.get(url)
-        else :
-            resp = requests.get(url, proxies=proxies)
-            
-        resp = resp.json()
-        version = resp['tag_name']
-        
-        if pdfu_version == version :
-            return 0
-        else :
-            answer = QMessageBox.question(self,'Deseja atualizar?', "Deseja atualizar?", QMessageBox.Yes | QMessageBox.No)
-            if QMessageBox.Yes == answer:
-                if os == 'Darwin' :
-                    webbrowser.open('https://github.com/felipecaninnovaes/PDFU/releases/download/' + version + '/PDFU_Setup_' + version + '_' + 'MacOS' + '.dmg')
-                elif os == 'Linux':
-                    webbrowser.open('https://github.com/felipecaninnovaes/PDFU/releases/download/' + version + '/PDFU_Setup_' + version + '_' + 'Linux' + '.zip')
-                elif os == 'Windows':
-                    webbrowser.open('https://github.com/felipecaninnovaes/PDFU/releases/download/' + version + '/PDFU_Setup_' + version + '_' + 'Windows' + '.exe')
-            elif QMessageBox.No == answer:
-                print ('nao')
+        url = urls.get(os_name)
+        if url:
+            webbrowser.open(url)
