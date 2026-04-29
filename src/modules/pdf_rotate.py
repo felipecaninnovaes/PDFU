@@ -31,13 +31,14 @@ def save_reordered_pdf(page_data: list, output_path: str, progress_cb=None) -> N
         out = Pdf.new()
         total = len(page_data)
         for i, (_, orig_idx, rotation) in enumerate(page_data):
-            page = src.pages[orig_idx]
-            # Apply rotation relative to existing rotation
+            out.pages.append(src.pages[orig_idx])
+            page = out.pages[-1]
             existing = int(page.get("/Rotate", 0))
             new_rot = (existing + rotation) % 360
-            page = out.copy_foreign(page)
-            page["/Rotate"] = new_rot
-            out.pages.append(page)
+            if new_rot != 0:
+                page["/Rotate"] = new_rot
+            elif "/Rotate" in page:
+                del page["/Rotate"]
             if progress_cb:
                 progress_cb(10 + int(80 * (i + 1) / total))
         out.save(output_path)
