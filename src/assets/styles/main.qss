@@ -14,10 +14,13 @@
 
 /* ── Global ── */
 QMainWindow, QWidget {
-    background-color: #F5F5F7;
     color: #1A1A2E;
     font-family: "Segoe UI", "Inter", sans-serif;
     font-size: 13px;
+}
+
+QLabel {
+    background-color: transparent;
 }
 
 /* ── Sidebar ── */
@@ -77,10 +80,22 @@ QMainWindow, QWidget {
     background-color: #F5F5F7;
 }
 
+QMainWindow > QWidget {
+    background-color: #F5F5F7;
+}
+
+QStackedWidget {
+    background-color: #F5F5F7;
+}
+
 /* ── Top bar ── */
 #topBar {
     background-color: #FFFFFF;
     border-bottom: 1px solid #E0E0E0;
+}
+
+#topBar QLabel {
+    background-color: transparent;
 }
 
 #topBarTitle {
@@ -105,6 +120,14 @@ QMainWindow, QWidget {
     background-color: #FFFFFF;
     border: 1px solid #E0E0E0;
     border-radius: 10px;
+}
+
+#card QLabel {
+    background-color: transparent;
+}
+
+#card QWidget {
+    background-color: transparent;
 }
 
 /* ── Page title ── */
